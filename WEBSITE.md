@@ -2,31 +2,37 @@
 
 ## Overview
 
-Single-page website for Silver AI Consulting. 9 sections. Conversion-optimized with "Book a Strategy Session" as the primary CTA and "Brand Codex + Newsletter" as the secondary CTA.
+Single-page website for Silver AI Consulting. 9 sections. Conversion-optimized with "Book a Strategy Session" as the primary CTA and "Agency Owner's Guide + Newsletter" as the secondary CTA.
+
+**Positioning:** Custom AI content systems for marketing agencies. ContentFlow OS helps agencies scale content operations while preserving brand voice.
 
 **Primary CTA:** Book a Strategy Session
-**Secondary CTA:** Brand Codex download + Newsletter signup
+**Secondary CTA:** Agency Owner's Guide download + Newsletter signup
 **Contact email:** contact@nicsilver.com
 **Social links:** LinkedIn, X / Twitter, YouTube
+
+**Offer:**
+- ContentFlow OS setup: $5,000 (one-time)
+- Monthly retainer: $750/mo
+- Content creation for select clients (limited availability)
 
 ---
 
 ## Design Direction
 
-- **Tone:** Modern, clean, elegant with a creative twist. Confident but not aggressive. Anti-generic AI positioning.
-- **Typography:** Serif for headlines (Playfair Display or Editorial New), clean sans-serif for body (Inter or DM Sans).
+- **Tone:** Confident, direct, empathetic to agency pain. Bold with substance. "Your team doesn't get replaced. They get supercharged."
+- **Typography:** Serif for headlines (Playfair Display), clean sans-serif for body (Inter).
 - **Background:** White. **Text:** Black. Lots of white space for a premium feel.
-- **Accent color:** `#f24b2e` — use with tasteful gradients where appropriate (buttons, highlights, hover states, decorative elements). Do not overuse — let the white space do the work.
-- **No:** Stock photos, gimmicks, countdown timers, high-pressure tactics, dark backgrounds as default.
+- **Accent color:** `#f24b2e` — use with tasteful gradients where appropriate.
+- **No:** Stock photos, gimmicks, countdown timers, high-pressure tactics, dark backgrounds.
 
 ### Sticky Elements
 - Sticky top nav with "Book a Strategy Session" button always visible
 - Mobile: floating CTA button at bottom of screen
-- Exit-intent popup offering the Brand Codex
 
 ### CTA Placement Map
-"Book a Strategy Session" appears **5 times**: nav bar, below services, below process, final CTA section, footer.
-Brand Codex / newsletter appears **3 times**: dedicated section, secondary option in final CTA, newsletter link in footer.
+"Book a Strategy Session" appears **5 times**: nav bar, below pricing, below process, final CTA section, footer.
+Agency Owner's Guide / newsletter appears **3 times**: dedicated section, secondary option in final CTA, newsletter link in footer.
 
 ---
 
@@ -42,19 +48,17 @@ Brand Codex / newsletter appears **3 times**: dedicated section, secondary optio
 
 ## Section 01 — Hero + Navigation
 
-**Design:** Clean, editorial feel. Professional headshot or abstract brand visual. No stock photos.
-
 ### Nav Bar
-Silver AI Consulting | Services • About • Newsletter | [Book a Strategy Session] (button)
+Silver AI Consulting | Pricing • How It Works • About | [Book a Strategy Session] (button)
 
 ### Eyebrow
-AI solutions for creative brands that want results, not gimmicks
+For marketing agencies ready to scale
 
 ### Headline (H1)
-Custom AI Apps & Systems for Creative Brands Ready to Scale
+Take On More Clients Without Hiring More People
 
 ### Sub-headline
-I build the tools your brand actually needs — content systems, AI video production, custom apps, and voice preservation technology that makes your marketing faster, better, and cheaper. No templates. No generic automation. Built around you.
+ContentFlow OS is a custom AI content system built around your clients' brand voices. One system for ideation, creation, review, and scheduling — so your team produces more without burning out.
 
 ### Primary CTA (button)
 Book a Strategy Session
@@ -63,96 +67,93 @@ Book a Strategy Session
 See how it works ↓
 
 ### Social Proof Bar
-15 years in biomedical research · Serial entrepreneur · Record deal musician · Building AI systems for creative brands since day one
+Agency tripled income in 5 months · 20% increase in client engagement · Content in days, not weeks · Brand voice preserved at scale
 
 ---
 
 ## Section 02 — Problem Statement
 
-**Design:** Subtle contrast from white — very light warm grey or off-white background to create visual separation. Let the words breathe. No images — let the copy do the heavy lifting.
-
 ### Eyebrow
 Sound familiar?
 
 ### Headline
-Stuck Between Doing Everything Yourself and Tools That Don't Get You
+Growth Shouldn't Feel Like a Trap
 
 ### Body Copy
-You've tried the AI tools. They produce words — just not *your* words. You spend as long editing the output as you would have writing it from scratch.
+Every new client should be a win. Instead, it means another hire, higher overhead, and thinner margins. Your revenue grows but your profit doesn't.
 
-Meanwhile, your content calendar is a graveyard of good intentions. Every piece still runs through you because nothing else can nail your voice. And hiring a full creative team? Six figures before anyone's even published a post.
+Your team is talented. But there are only so many hours in the day. Content quality drops as volume increases. Brand voices start blending together. And the tools? Scattered across Google Docs, Canva, Buffer, Slack, and a dozen email threads.
 
-So you stay stuck — burning out, leaving growth on the table, choosing between your sanity and your standards.
+You've tried AI. ChatGPT, Jasper, whatever the latest tool is. The output sounds like it was written by someone who's never heard of your clients' brands. Generic, off-voice, unusable without heavy editing.
+
+So you're stuck choosing between quality and volume. Between growth and burnout. Between saying yes to new clients and keeping the ones you have happy.
 
 ### Transition
-There's a better way. Not another tool or another hire. A system built around your brand from the ground up.
+There's a better way to scale. Not with more headcount. With a smarter system.
 
 ---
 
-## Section 03 — Solution / Methodology
-
-**Design:** Three or four-column card layout for the solution types. Clean iconography. Should feel methodical and premium.
+## Section 03 — Solution / ContentFlow OS
 
 ### Eyebrow
-How I solve it
+The system
 
 ### Headline
-I Build Custom AI Systems That Work the Way Your Brand Thinks
+ContentFlow OS: One System to Scale Your Content Operation
 
 ### Body Copy
-I don't sell you a tool and wish you luck. I study how your brand communicates — your voice, your rhythm, your audience — and then I build the systems that turn that understanding into scalable output.
+ContentFlow OS is a custom AI-powered content system I build specifically for your agency. It learns each client's brand voice, centralizes your entire content lifecycle, and makes your team dramatically faster — without sacrificing the quality your clients hired you for.
 
-Every solution starts with a deep analysis of your brand's creative DNA that goes far beyond a style guide or a prompt template. That foundation powers everything.
+### Pillars (card layout)
 
-### What I Build (card layout)
+**Brand Voice AI**
+The system learns and preserves each client's unique voice. No generic AI output. Content that sounds like it was written by someone who knows the brand.
 
-**Custom AI Apps**
-Purpose-built tools designed for your specific workflow, not someone else's
+**Centralized Workflow**
+Ideation, creation, review, approval, and scheduling in one place. No more chasing status updates across five different tools.
 
-**Content & Marketing Systems**
-Automated pipelines that turn your ideas, meetings, and conversations into publish-ready output across platforms
+**Team Amplification**
+Your team doesn't get replaced. They get supercharged. The same people producing 2-3x the output at higher quality.
 
-**AI Video Production**
-Professional video created through AI, at a fraction of the traditional cost and turnaround time
-
-**Voice & Brand Preservation**
-Systems that capture your writing fingerprint so every piece sounds unmistakably like you
+**Built For You**
+This isn't a SaaS tool you configure yourself. I build it around your specific brands, workflows, and team structure. Your team just uses it.
 
 ---
 
-## Section 04 — What I Build
-
-**Design:** Card-based layout for solution types. Tasty Slurp gets a subtle visual distinction — bordered callout or different background — but stays within the section flow.
+## Section 04 — Pricing
 
 ### Eyebrow
-Solutions, not packages
+Simple pricing
 
 ### Headline
-Every Brand Is Different. Every System I Build Is Too.
+One Service. Everything You Need to Scale.
 
 ### Body Copy
-I don't sell off-the-shelf packages. I build custom solutions based on what your brand actually needs to grow. Here's what that typically looks like:
+No packages. No tiers. Every agency gets the same thing: a fully custom ContentFlow OS built around your brands and workflows.
 
-### Custom AI Apps
-Need a tool that doesn't exist yet? I build purpose-built AI applications tailored to your workflow — whether that's a content repurposing engine, an AI-powered brief generator, or something nobody's thought of yet.
+### Setup — $5,000 (one-time)
+- Deep dive into your agency's brands, voices, and workflows
+- Custom ContentFlow OS built for your specific operation
+- Brand voice training for every client brand
+- Full content lifecycle configuration
+- Team onboarding and training
+- Producing content through the system within weeks
 
-### Content & Marketing Systems
-I design end-to-end pipelines that turn your raw ideas, calls, and conversations into publish-ready output across every platform. Less manual work. More consistent results.
+### Monthly Retainer — $750/mo
+- Ongoing system optimization and refinement
+- New brand onboarding as you add clients
+- Performance monitoring and quality assurance
+- Priority support when you need it
+- Regular system updates as AI capabilities improve
 
-### AI Video Production
-Professional video created through AI — from strategy to finished product. The quality of a production team at a fraction of the cost and turnaround time.
-
-### Voice & Brand Preservation
-Systems that learn how you write, speak, and think — so every piece of AI-generated output sounds unmistakably like you. Not a chatbot. Not a template. You.
-
-### Done For You (Tasty Slurp callout)
-Need someone to run it all? Tasty Slurp is my AI creative agency — a lean, human-led team that handles your creative strategy, production, and distribution using the same systems I build. You stay focused on your business.
+### Content Creation Callout
+**Need Content Created, Not Just a System?**
+For select agencies, I also offer hands-on content creation powered by ContentFlow OS. Your brands. Your voice. Content produced and delivered at a pace your team couldn't match alone. Limited availability — mention it during your strategy session.
 
 ### CTA
-Every project starts with a conversation. [Book a Strategy Session] — 30 minutes, no pitch, just clarity on what's possible.
+Compare it to the cost of hiring two more team members. Then compare the output. [Book a Strategy Session] — 30 minutes. No pitch. Just a clear picture of what ContentFlow OS can do for your agency.
 
 ### Testimonial — Carly Craver
-- **Image:** https://res.cloudinary.com/drdkvqdzd/image/upload/v1771324167/carly_cjgeit.jpg
 - **Quote:** "I tripled my income within 5 months of implementing ContentFlow OS. Nic's system is an absolute game changer — it's like having an extra brain handling my content operations."
 - **Name:** Carly Craver
 - **Company:** C2 Infinite Marketing
@@ -161,8 +162,6 @@ Every project starts with a conversation. [Book a Strategy Session] — 30 minut
 
 ## Section 05 — Authority & About
 
-**Design:** Professional headshot of Nic. Credentials as icon badges or a clean stat bar. This section should feel personal and grounded.
-
 ### Nic's Headshot
 https://res.cloudinary.com/drdkvqdzd/image/upload/v1770046548/hf_20260122_080928_fa35491d-740d-45dc-aee7-cd29f4791637_gxqily_1_k1iqx9.png
 
@@ -170,24 +169,21 @@ https://res.cloudinary.com/drdkvqdzd/image/upload/v1770046548/hf_20260122_080928
 Why me
 
 ### Headline
-I've Built Businesses Across Five Industries. Now I Build the AI Systems That Scale Them.
+I Built This Because Generic AI Content Is an Insult to Good Brands
 
 ### Body Copy
-I'm Nic Silver — an AI systems builder based in Trondheim, Norway.
+I'm Nic Silver. My background spans entrepreneurship, biomedical research, music production, and 3 years of building AI-powered systems.
 
-Before I got into AI, I spent 15 years in biomedical research, had a record deal as a music producer, and built multiple businesses from scratch in industries that have nothing in common except that they all required figuring things out from zero.
+When I started building AI content tools, the problem was obvious: every tool produced the same bland, voice-less output. Great for volume. Terrible for brands that actually care about how they sound.
 
-That's the thread. I'm a builder. I've always been a builder. When AI hit, I didn't see a shortcut — I saw a new material to build with.
+So I built something different. ContentFlow OS started as a system for my own content operation. It worked so well that agencies started asking for it. Now I build it for marketing and social media agencies who refuse to let AI flatten their clients' voices.
 
-I started Silver AI Consulting because I watched an entire industry rush to automate everything and ask questions later. Everyone was talking about speed and scale. Nobody was talking about whether the output was actually any good — or whether it sounded anything like the brand it was supposed to represent.
-
-That's the gap I fill. I combine scientific rigour with creative instinct to build AI systems that don't just produce more — they produce the right output, in your voice, for your audience.
+I'm not a generic AI consultant selling automation. I'm a builder who understands that brand voice is sacred — and that the right system can protect it at scale.
 
 ### Credentials Bar
-Published scientist · Serial entrepreneur · Record deal musician · Trilingual (Norwegian, Swedish, English) · Building AI systems for creative brands
+10+ custom AI apps built · 3+ years building with AI · Agencies served globally · Serial entrepreneur · Published scientist
 
 ### Testimonial — Jeremey Singh
-- **Image:** https://res.cloudinary.com/drdkvqdzd/image/upload/v1771324167/jeremey_zafmiz.png
 - **Quote:** "His system has helped me create better content, faster — across multiple platforms. It makes using advanced AI tools and automation easy."
 - **Name:** Jeremey Singh
 - **Company:** Content Creator
@@ -196,129 +192,76 @@ Published scientist · Serial entrepreneur · Record deal musician · Trilingual
 
 ## Section 06 — How It Works
 
-**Design:** Numbered timeline or horizontal step flow. Clean and visual. Each step should feel achievable and low-risk.
-
 ### Eyebrow
 The process
 
 ### Headline
-Three Steps From First Call to Real Results
+From Strategy Call to Scaled Content in Three Steps
 
 ### Step 1 — Strategy Session
-A focused 30-minute call where I learn how your brand operates, where the bottlenecks are, and what growth looks like for you. You'll walk away with a clear picture of what's possible — whether we work together or not.
+A focused 30-minute call where I learn about your agency: your clients, your brands, your workflows, and where the bottlenecks are. You'll walk away knowing exactly how ContentFlow OS would work for your operation.
 
-### Step 2 — Find the Right Fit
-Every brand is different, and so is every engagement. Maybe you need me to build the system. Maybe you need guidance to build it yourself. Maybe it's somewhere in between. We figure out what makes sense for your situation, your budget, and your goals.
+### Step 2 — System Build
+I build your custom ContentFlow OS. That means deep-diving into each client brand, training the AI on their voice, and configuring the entire content lifecycle for your team. No generic templates. Everything tailored to your agency.
 
-### Step 3 — Execute & Scale
-Whether I'm building it, advising on it, or a mix of both — you get a working system that produces real results. Faster creative output, lower costs, and workflows that scale without sacrificing quality or your brand's identity.
+### Step 3 — Launch & Scale
+Your team starts using the system with full onboarding and training. I stay on retainer to optimize, add new brands, and keep everything running as you grow. More clients, same team, better margins.
 
 ### CTA
-It starts with a conversation. [Book Your Strategy Session] — 30 minutes that will change how you think about AI in your business.
+The conversation that changes how your agency scales. [Book Your Strategy Session] — 30 minutes. Free. No commitment.
 
 ---
 
 ## Section 07 — Lead Magnet + Newsletter
 
-**Design:** Visually distinct section — light background. Email form should be dead simple: one field, one button. Consider a mockup of the Notion workspace.
-
 ### Eyebrow
 Free resource
 
 ### Headline
-Get the Brand Codex — My Complete System for Creating On-Brand Content With AI
+The Agency Owner's Guide to AI Content That Doesn't Sound Like AI
 
 ### Body Copy
-Not ready for a call? Start here. The Brand Codex is the same system I use with clients to make sure AI-generated content actually sounds like the brand it's supposed to represent. It's not a checklist — it's a complete, ready-to-use framework built in Notion.
+How to evaluate AI content tools, protect brand voice at scale, and build a content operation that grows with your agency. No fluff. Just the frameworks I use with my clients.
 
 ### Email Form (Flodesk Embed)
-
-⚠️ **Do not** wrap the form in any extra layout or container. Do not add any heading or text around it. Do not apply any styles. Keep Flodesk's original style.
-⚠️ **Do not** embed the form inside any other section. It lives in this section only.
-
-Create a separate component and import it into `src/pages/Index.tsx`:
-
-```jsx
-import { useEffect } from 'react';
-
-export default function NewsletterForm() {
-  useEffect(() => {
-    // Inject Flodesk script into <head> if not already present
-    const existingScript = document.querySelector('script[src*="flodesk"]');
-    if (!existingScript) {
-      (function(w, d, t, h, s, n) {
-        w.FlodeskObject = n;
-        var fn = function() {
-          (w[n].q = w[n].q || []).push(arguments);
-        };
-        w[n] = w[n] || fn;
-        var f = d.getElementsByTagName(t)[0];
-        var v = '?v=' + Math.floor(new Date().getTime() / (120 * 1000)) * 60;
-        var sm = d.createElement(t);
-        sm.async = true;
-        sm.type = 'module';
-        sm.src = h + s + '.mjs' + v;
-        f.parentNode.insertBefore(sm, f);
-        var sn = d.createElement(t);
-        sn.async = true;
-        sn.noModule = true;
-        sn.src = h + s + '.js' + v;
-        f.parentNode.insertBefore(sn, f);
-      })(window, document, 'script', 'https://assets.flodesk.com', '/universal', 'fd');
-    }
-
-    // Initialize the form
-    window.fd('form', {
-      formId: '6971eaa95705353f2cd054e0',
-      containerEl: '#fd-form-6971eaa95705353f2cd054e0'
-    });
-  }, []);
-
-  return (
-    <div id="fd-form-6971eaa95705353f2cd054e0"></div>
-  );
-}
-```
+Form ID: 6971eaa95705353f2cd054e0
 
 ### Below Form
-Plus: join my weekly newsletter for insights on building smarter AI systems for your creative business. No fluff. Unsubscribe anytime.
+Plus: join my weekly newsletter where I share insights on scaling content operations with AI, brand voice preservation, and building systems that grow your margins. Unsubscribe anytime.
 
 ---
 
 ## Section 08 — Final CTA
 
-**Design:** Full-width section. Consider a subtle accent gradient or light background shift to signal this is the final moment. Should feel like a moment of decision while staying clean and premium.
-
 ### Testimonial — Brandon Spring (place above the headline)
-- **Image:** https://res.cloudinary.com/drdkvqdzd/image/upload/v1771324168/brandon_ii4ts2.png
 - **Quote:** "Nic has unlocked the potential of AI to assist you, not replace you. There's no hard selling — just a genuine person who truly wants to help. Don't think twice about setting up a call. It will change the way you generate content for the better."
 - **Name:** Brandon Spring
 - **Company:** Content Creator
 
 ### Headline
-Your Brand Deserves Better Than Generic AI
+Your Competitors Are Scaling. Are You?
 
 ### Body Copy
-You didn't build your brand by copying templates. Don't scale it that way either. Let's figure out what the right AI system looks like for your business — and whether it makes sense to build it together.
+The agencies that win long-term aren't the ones producing the most content. They're the ones producing the most content that still sounds like their clients. ContentFlow OS makes that possible — without growing your headcount.
 
-30 minutes. No pitch. Just an honest conversation about what's possible.
+30 minutes. No pitch. Just an honest conversation about scaling your agency.
 
 ### Primary CTA (button)
 Book Your Strategy Session
 
 ### Secondary CTA (text link)
-Not ready? Grab the Brand Codex and start there →
+Not ready? Get the free guide to AI content that doesn't sound like AI →
 
 ---
 
 ## Section 09 — Footer
 
 ### Left Column
-Silver AI Consulting — AI systems for creative brands.
+Silver AI Consulting — Helping marketing agencies scale content operations with AI.
 Based in Trondheim, Norway. Working globally.
 
 ### Middle Column (Links)
-Services · About · Newsletter · Tasty Slurp Agency
+Pricing · How It Works · About · Newsletter
 
 ### Social Links
 LinkedIn · X / Twitter · YouTube
