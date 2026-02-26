@@ -264,21 +264,14 @@ h3 {
 }
 
 .nav-logo {
-  font-family: var(--font-body);
-  font-size: 1.125rem;
-  font-weight: 700;
-  color: var(--text-primary);
+  display: flex;
+  align-items: center;
   white-space: nowrap;
-  letter-spacing: -0.01em;
-  position: relative;
 }
 
-.logo-doodle {
-  position: absolute;
-  bottom: -4px;
-  left: 0;
-  width: 100%;
-  height: 6px;
+.nav-logo-img {
+  height: 36px;
+  width: auto;
 }
 
 .nav-links {
@@ -403,20 +396,6 @@ h3 {
   transform: translateY(20px);
 }
 
-.doodle-highlight {
-  position: relative;
-  display: inline;
-}
-
-.doodle-hero-underline {
-  position: absolute;
-  bottom: -4px;
-  left: 0;
-  width: 100%;
-  height: 12px;
-  z-index: -1;
-}
-
 .hero-sub {
   font-size: clamp(1rem, 1.5vw, 1.25rem);
   font-weight: 400;
@@ -458,41 +437,9 @@ h3 {
   border-radius: 2px;
 }
 
-/* Hero doodle positioning */
-.doodle-hero-arrow {
-  position: absolute;
-  bottom: 10%;
-  left: 50%;
-  transform: translateX(180px);
-  width: 40px;
-  opacity: 0;
-}
-
-.doodle-hero-scribble-1 {
-  position: absolute;
-  top: 10%;
-  right: 5%;
-  width: 70px;
-  opacity: 0;
-}
-
-.doodle-hero-scribble-2 {
-  position: absolute;
-  bottom: 20%;
-  left: 3%;
-  width: 55px;
-  opacity: 0;
-}
-
 /* ==========================================================================
    PROBLEM SECTION
    ========================================================================== */
-
-.doodle-section-divider {
-  width: 50px;
-  height: 6px;
-  margin-bottom: 1rem;
-}
 
 .problem-body {
   max-width: var(--content-max);
@@ -536,15 +483,6 @@ h3 {
   color: var(--text-primary);
   margin-bottom: 1.25rem;
   opacity: 0.85;
-}
-
-.doodle-dna-helix {
-  position: absolute;
-  right: 5%;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 40px;
-  height: 200px;
 }
 
 /* ==========================================================================
@@ -635,20 +573,6 @@ h3 {
   line-height: 1.65;
 }
 
-/* Gear doodle */
-.doodle-gear {
-  position: absolute;
-  bottom: 3rem;
-  right: 2%;
-  width: 44px;
-  height: 44px;
-  opacity: 0.5;
-}
-
-.section-cream .doodle-gear {
-  z-index: 1;
-}
-
 /* ==========================================================================
    STATS / RESULTS
    ========================================================================== */
@@ -695,14 +619,6 @@ h3 {
   height: 100%;
   min-width: 70px;
   min-height: 50px;
-}
-
-.doodle-stat-underline {
-  position: absolute;
-  bottom: -4px;
-  left: 0;
-  width: 100%;
-  height: 8px;
 }
 
 .stat-label {
@@ -753,15 +669,6 @@ h3 {
 
 .testimonial-card:hover {
   border-color: rgba(242, 75, 46, 0.2);
-}
-
-.testimonial-card .doodle-quote {
-  position: absolute;
-  top: -12px;
-  left: -8px;
-  width: 36px;
-  height: 32px;
-  z-index: 2;
 }
 
 .testimonial-quote {
@@ -826,11 +733,14 @@ h3 {
   color: var(--text-primary);
 }
 
-.who-item .doodle-check {
-  width: 22px;
-  height: 22px;
+.who-item::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
   flex-shrink: 0;
-  margin-top: 3px;
+  margin-top: 0.6em;
 }
 
 .who-closing {
@@ -838,23 +748,6 @@ h3 {
   font-weight: 500;
   color: var(--text-primary);
   margin-bottom: 2rem;
-}
-
-.doodle-highlight-inline {
-  position: relative;
-  display: inline;
-}
-
-.doodle-highlight-inline::after {
-  content: '';
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  width: 100%;
-  height: 3px;
-  background: var(--accent);
-  opacity: 0.6;
-  border-radius: 2px;
 }
 
 /* ==========================================================================
@@ -868,14 +761,6 @@ h3 {
   text-align: center;
   position: relative;
   border-left: 3px solid var(--accent);
-}
-
-.doodle-starburst {
-  position: absolute;
-  top: -18px;
-  right: -18px;
-  width: 40px;
-  height: 40px;
 }
 
 .guarantee-headline {
@@ -917,13 +802,6 @@ h3 {
 .about-headshot {
   width: 100%;
   filter: grayscale(100%) contrast(1.2);
-}
-
-.doodle-photo-scribble {
-  position: absolute;
-  bottom: 10%;
-  right: -10px;
-  width: 55px;
 }
 
 .about-text-col .section-headline {
@@ -993,29 +871,6 @@ h3 {
   max-width: 480px;
 }
 
-/* Final CTA doodles */
-.doodle-cta-scribble-1 {
-  position: absolute;
-  top: -10%;
-  right: -8%;
-  width: 60px;
-}
-
-.doodle-cta-scribble-2 {
-  position: absolute;
-  bottom: -5%;
-  left: -6%;
-  width: 45px;
-}
-
-.doodle-cta-arrow {
-  position: absolute;
-  bottom: 15%;
-  right: -12%;
-  width: 36px;
-  opacity: 0.6;
-}
-
 /* ==========================================================================
    FOOTER
    ========================================================================== */
@@ -1024,14 +879,6 @@ h3 {
   background: var(--bg-dark);
   padding: 3rem 0;
   position: relative;
-}
-
-.doodle-wave-footer {
-  position: absolute;
-  top: -4px;
-  left: 0;
-  width: 100%;
-  height: 8px;
 }
 
 .footer-grid {
@@ -1160,14 +1007,6 @@ h3 {
     padding: 6rem 0;
   }
 
-  /* Reduce doodle density by ~20% */
-  .doodle-hero-scribble-2 {
-    display: none;
-  }
-
-  .doodle-gear {
-    display: none;
-  }
 }
 
 /* ==========================================================================
@@ -1328,23 +1167,6 @@ h3 {
     padding-bottom: 72px;
   }
 
-  /* Hide desktop-only doodles (~40% reduction) */
-  .doodle-desktop {
-    display: none;
-  }
-
-  .doodle-cta-scribble-1,
-  .doodle-cta-scribble-2,
-  .doodle-cta-arrow {
-    display: none;
-  }
-
-  .doodle-starburst {
-    width: 30px;
-    height: 30px;
-    top: -12px;
-    right: -12px;
-  }
 }
 
 /* Small mobile */

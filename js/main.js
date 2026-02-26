@@ -207,39 +207,9 @@
         opacity: 1, y: 0, duration: 0.5, ease: ease
       }, '-=0.25');
 
-    // Hero doodles draw on
-    setTimeout(function () {
-      var heroUnderline = document.querySelector('.doodle-hero-underline');
-      if (heroUnderline) drawOnDoodle(heroUnderline, { duration: 0.8, delay: 0 });
-
-      var heroArrow = document.querySelector('.doodle-hero-arrow');
-      if (heroArrow) {
-        gsap.to(heroArrow, { opacity: 1, duration: 0.3 });
-        drawOnDoodle(heroArrow, { duration: 0.6, delay: 0.1 });
-      }
-
-      var scribble1 = document.querySelector('.doodle-hero-scribble-1');
-      if (scribble1) {
-        gsap.to(scribble1, { opacity: 1, duration: 0.3 });
-        drawOnDoodle(scribble1, { duration: 0.6, delay: 0.2 });
-      }
-
-      var scribble2 = document.querySelector('.doodle-hero-scribble-2');
-      if (scribble2) {
-        gsap.to(scribble2, { opacity: 1, duration: 0.3 });
-        drawOnDoodle(scribble2, { duration: 0.6, delay: 0.3 });
-      }
-    }, 300);
-
-    // Logo doodle
-    var logoDoodle = document.querySelector('.logo-doodle');
-    if (logoDoodle) drawOnDoodle(logoDoodle, { duration: 0.5, delay: 0.8 });
-
     /* ==========================================
        PROBLEM SECTION
        ========================================== */
-    scrollDrawOn('.doodle-section-divider', '#problem', { duration: 0.5 });
-
     gsap.from('#problem .section-label', {
       scrollTrigger: { trigger: '#problem', start: 'top 80%' },
       opacity: 0, y: 20, duration: 0.5, ease: ease
@@ -278,8 +248,6 @@
       opacity: 0, y: 20, duration: 0.5, stagger: 0.1, ease: ease
     });
 
-    scrollDrawOn('.doodle-dna-helix', '#solution', { duration: 1.2, delay: 0.3 });
-
     /* ==========================================
        METHOD / HOW IT WORKS
        ========================================== */
@@ -304,8 +272,6 @@
         }
       });
     });
-
-    scrollDrawOn('.doodle-gear', '#method', { duration: 0.8, delay: 0.5 });
 
     /* ==========================================
        STATS / RESULTS
@@ -342,8 +308,8 @@
       }
     });
 
-    // Draw on stat circles/underlines
-    document.querySelectorAll('.doodle-stat-circle, .doodle-stat-underline').forEach(function (svg, i) {
+    // Draw on stat circles
+    document.querySelectorAll('.doodle-stat-circle').forEach(function (svg, i) {
       ScrollTrigger.create({
         trigger: '.stats-grid',
         start: 'top 85%',
@@ -372,18 +338,6 @@
       opacity: 0, y: 24, duration: 0.6, stagger: 0.1, ease: ease
     });
 
-    // Draw on quote doodles
-    document.querySelectorAll('.testimonial-card .doodle-quote').forEach(function (svg, i) {
-      ScrollTrigger.create({
-        trigger: '.testimonials-grid',
-        start: 'top 82%',
-        once: true,
-        onEnter: function () {
-          drawOnDoodle(svg, { duration: 0.5, delay: i * 0.1 + 0.3 });
-        }
-      });
-    });
-
     /* ==========================================
        WHO THIS IS FOR
        ========================================== */
@@ -402,18 +356,6 @@
       opacity: 0, y: 16, duration: 0.5, stagger: 0.1, ease: ease
     });
 
-    // Draw on checkmarks
-    document.querySelectorAll('.who-item .doodle-check').forEach(function (svg, i) {
-      ScrollTrigger.create({
-        trigger: '.who-list',
-        start: 'top 82%',
-        once: true,
-        onEnter: function () {
-          drawOnDoodle(svg, { duration: 0.4, delay: i * 0.1 });
-        }
-      });
-    });
-
     gsap.from('.who-closing', {
       scrollTrigger: { trigger: '.who-closing', start: 'top 88%' },
       opacity: 0, y: 16, duration: 0.5, ease: ease
@@ -426,8 +368,6 @@
       scrollTrigger: { trigger: '#guarantee', start: 'top 80%' },
       opacity: 0, y: 20, duration: 0.7, ease: ease
     });
-
-    scrollDrawOn('.doodle-starburst', '#guarantee', { duration: 0.6, delay: 0.3 });
 
     /* ==========================================
        ABOUT
@@ -447,8 +387,6 @@
       opacity: 0, y: 16, duration: 0.5, stagger: 0.08, ease: ease, delay: 0.2
     });
 
-    scrollDrawOn('.doodle-photo-scribble', '#about', { duration: 0.6, delay: 0.5 });
-
     /* ==========================================
        FINAL CTA
        ========================================== */
@@ -465,19 +403,6 @@
     gsap.from('.final-cta-buttons', {
       scrollTrigger: { trigger: '.final-cta-buttons', start: 'top 90%' },
       opacity: 0, y: 16, duration: 0.6, ease: ease
-    });
-
-    // Final CTA doodles
-    var ctaDoodles = document.querySelectorAll('.doodle-cta-scribble-1, .doodle-cta-scribble-2, .doodle-cta-arrow');
-    ctaDoodles.forEach(function (svg, i) {
-      ScrollTrigger.create({
-        trigger: '.final-cta-content',
-        start: 'top 85%',
-        once: true,
-        onEnter: function () {
-          drawOnDoodle(svg, { duration: 0.6, delay: i * 0.2 });
-        }
-      });
     });
 
     // Subtle CTA glow pulse
@@ -502,18 +427,6 @@
     /* ==========================================
        FOOTER
        ========================================== */
-    var footerWave = document.querySelector('.doodle-wave-footer');
-    if (footerWave) {
-      ScrollTrigger.create({
-        trigger: '.site-footer',
-        start: 'top 95%',
-        once: true,
-        onEnter: function () {
-          drawOnDoodle(footerWave, { duration: 1.2, stagger: 0 });
-        }
-      });
-    }
-
     gsap.from('.footer-grid > *', {
       scrollTrigger: { trigger: '.site-footer', start: 'top 92%' },
       opacity: 0, y: 12, duration: 0.5, ease: ease
