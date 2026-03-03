@@ -50,6 +50,7 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   scroll-padding-top: var(--nav-height);
+  overflow-x: hidden;
 }
 
 body {
@@ -273,12 +274,12 @@ h3 {
   flex-direction: column;
   justify-content: center;
   gap: 5px;
-  width: 32px;
-  height: 32px;
+  width: 44px;
+  height: 44px;
   background: none;
   border: none;
   cursor: pointer;
-  padding: 4px;
+  padding: 10px;
 }
 
 .nav-toggle-bar {
@@ -692,6 +693,8 @@ h3 {
   text-underline-offset: 3px;
   text-decoration-color: var(--border);
   transition: text-decoration-color 0.2s ease;
+  min-height: 44px;
+  padding: 0.5rem 0;
 }
 
 .about-links a:hover {
@@ -775,6 +778,8 @@ h3 {
   font-size: 0.875rem;
   color: var(--accent);
   transition: opacity 0.2s ease;
+  min-height: 44px;
+  padding: 0.5rem 0;
 }
 
 .footer-links a:hover {
@@ -832,7 +837,16 @@ h3 {
   }
 
   .cards-3 {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cards-2x2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Let the flagship card span full width on its own row */
+  .cards-2x2 .offer-card-flagship {
+    grid-column: 1 / -1;
   }
 
   .testimonials-grid {
@@ -843,8 +857,12 @@ h3 {
     grid-template-columns: 1fr;
   }
 
+  .about-image-col {
+    max-width: 240px;
+  }
+
   .about-headshot {
-    width: 200px;
+    width: 100%;
   }
 }
 
@@ -906,11 +924,6 @@ h3 {
     transform: translateY(-7px) rotate(-45deg);
   }
 
-  .nav-cta {
-    padding: 0.5rem 1rem;
-    font-size: 0.8125rem;
-  }
-
   /* --- Hero --- */
   .hero {
     min-height: auto;
@@ -942,13 +955,20 @@ h3 {
     grid-template-columns: 1fr;
   }
 
+  .about-image-col {
+    order: -1;
+    max-width: 220px;
+    margin: 0 auto;
+    aspect-ratio: 1;
+  }
+
   .about-headshot {
-    width: 180px;
+    width: 100%;
   }
 
   /* --- Guarantee --- */
   .guarantee-block {
-    padding: 2rem;
+    padding: 2rem 1.5rem;
   }
 
   /* --- Final CTA --- */
@@ -963,6 +983,46 @@ h3 {
     gap: 1rem;
   }
 
+  .footer-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.25rem 0.5rem;
+  }
+
+  .footer-divider {
+    display: none;
+  }
+
+  /* --- Box shadows (reduce on mobile to prevent overflow) --- */
+  .card,
+  .testimonial-card,
+  .featured-testimonial,
+  .guarantee-block {
+    box-shadow: 4px 4px 0 0 var(--text-primary);
+  }
+
+  .card:hover,
+  .testimonial-card:hover,
+  .featured-testimonial:hover,
+  .guarantee-block:hover {
+    box-shadow: 4px 4px 0 0 var(--text-primary);
+    transform: none;
+  }
+
+  /* --- Nav CTA (ensure 44px min tap target) --- */
+  .nav-cta {
+    min-height: 44px;
+    padding: 0.5rem 1rem;
+    font-size: 0.8125rem;
+  }
+
+  /* --- Hero secondary CTA tap target --- */
+  .hero-secondary-cta {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+
   /* --- Mobile CTA --- */
   .mobile-cta {
     display: block;
@@ -973,7 +1033,7 @@ h3 {
   }
 }
 
-/* Small mobile */
+/* Small mobile (375px) */
 @media (max-width: 480px) {
   h1 {
     font-size: 2rem;
@@ -985,6 +1045,25 @@ h3 {
 
   .container {
     padding: 0 1rem;
+  }
+
+  /* Ensure featured testimonial doesn't overflow */
+  .featured-testimonial {
+    padding: 1.5rem;
+  }
+
+  /* Tighter card padding */
+  .card {
+    padding: 20px;
+  }
+
+  .testimonial-card {
+    padding: 20px;
+  }
+
+  /* Nav: ensure logo doesn't push CTA off screen */
+  .nav-logo-img {
+    height: 36px;
   }
 }
 
