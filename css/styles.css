@@ -685,20 +685,15 @@ h3 {
 .about-links a {
   display: inline-flex;
   align-items: center;
-  gap: 0.4rem;
-  font-size: 0.9375rem;
-  font-weight: 500;
-  color: var(--accent);
-  text-decoration: underline;
-  text-underline-offset: 3px;
-  text-decoration-color: var(--border);
-  transition: text-decoration-color 0.2s ease;
+  color: var(--text-primary);
   min-height: 44px;
   padding: 0.5rem 0;
+  transition: color 0.2s ease, transform 0.2s ease;
 }
 
 .about-links a:hover {
-  text-decoration-color: var(--accent);
+  color: var(--accent);
+  transform: scale(1.15);
 }
 
 /* ==========================================================================
@@ -774,16 +769,15 @@ h3 {
 .footer-links a {
   display: inline-flex;
   align-items: center;
-  gap: 0.35rem;
-  font-size: 0.875rem;
-  color: var(--accent);
-  transition: opacity 0.2s ease;
+  color: var(--text-on-dark-muted);
   min-height: 44px;
-  padding: 0.5rem 0;
+  padding: 0.5rem;
+  transition: color 0.2s ease, transform 0.2s ease;
 }
 
 .footer-links a:hover {
-  opacity: 0.75;
+  color: var(--accent);
+  transform: scale(1.15);
 }
 
 .footer-links a:focus-visible {
