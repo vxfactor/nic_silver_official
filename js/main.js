@@ -19,14 +19,12 @@
   function onScroll() {
     var scrollY = window.scrollY;
 
-    // Header border on scroll
     if (scrollY > 100) {
       header.classList.add('scrolled');
     } else {
       header.classList.remove('scrolled');
     }
 
-    // Mobile floating CTA
     if (mobileCta && heroSection) {
       var heroBottom = heroSection.offsetTop + heroSection.offsetHeight;
       if (scrollY > heroBottom - 200) {
@@ -34,14 +32,6 @@
       } else {
         mobileCta.classList.remove('visible');
       }
-    }
-
-    // Scroll progress bar
-    var progressBar = document.querySelector('.scroll-progress');
-    if (progressBar) {
-      var docHeight = document.documentElement.scrollHeight - window.innerHeight;
-      var progress = docHeight > 0 ? (scrollY / docHeight) * 100 : 0;
-      progressBar.style.width = progress + '%';
     }
   }
 
@@ -80,68 +70,15 @@
   });
 
   /* ------------------------------------------------------------------
-     SVG Doodle Draw-On Setup
-     ------------------------------------------------------------------ */
-  function setupDoodleDrawOn() {
-    var doodles = document.querySelectorAll('.doodle');
-    doodles.forEach(function (svg) {
-      var paths = svg.querySelectorAll('path, circle');
-      paths.forEach(function (path) {
-        var length = path.getTotalLength ? path.getTotalLength() : 0;
-        if (length > 0) {
-          path.style.strokeDasharray = length;
-          path.style.strokeDashoffset = length;
-        }
-      });
-    });
-  }
-
-  /* ------------------------------------------------------------------
-     Stat Count-Up Animation
-     ------------------------------------------------------------------ */
-  function animateCountUp(element, targetValue, suffix, duration) {
-    var startTime = null;
-    var startValue = 0;
-
-    function step(timestamp) {
-      if (!startTime) startTime = timestamp;
-      var progress = Math.min((timestamp - startTime) / duration, 1);
-      // Ease out
-      var easedProgress = 1 - Math.pow(1 - progress, 3);
-      var current = Math.round(startValue + (targetValue - startValue) * easedProgress);
-      element.textContent = current + suffix;
-      if (progress < 1) {
-        requestAnimationFrame(step);
-      }
-    }
-
-    requestAnimationFrame(step);
-  }
-
-  function animateTypeIn(element, text, duration) {
-    var chars = text.split('');
-    var delay = duration / chars.length;
-    element.textContent = '';
-    chars.forEach(function (char, i) {
-      setTimeout(function () {
-        element.textContent += char;
-      }, delay * i);
-    });
-  }
-
-  /* ------------------------------------------------------------------
      GSAP Animations
      ------------------------------------------------------------------ */
   if (prefersReducedMotion) {
-    // Show everything immediately
     document.querySelectorAll('.hero-headline, .hero-sub, .hero-ctas').forEach(function (el) {
       el.style.opacity = '1';
       el.style.transform = 'none';
     });
     return;
   }
-
-  setupDoodleDrawOn();
 
   function initGSAP() {
     if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') {
@@ -152,48 +89,8 @@
     gsap.registerPlugin(ScrollTrigger);
 
     var ease = 'power2.out';
-    var easeInOut = 'power2.inOut';
 
-    /* --- Helper: animate doodle paths draw-on --- */
-    function drawOnDoodle(svgElement, options) {
-      var opts = options || {};
-      var duration = opts.duration || 0.7;
-      var delay = opts.delay || 0;
-      var stagger = opts.stagger || 0.2;
-
-      var paths = svgElement.querySelectorAll('path, circle');
-      paths.forEach(function (path, i) {
-        var length = path.getTotalLength ? path.getTotalLength() : 0;
-        if (length > 0) {
-          gsap.to(path, {
-            strokeDashoffset: 0,
-            duration: duration,
-            ease: easeInOut,
-            delay: delay + (i * stagger),
-          });
-        }
-      });
-    }
-
-    /* --- Helper: scroll-triggered doodle draw-on --- */
-    function scrollDrawOn(selector, triggerSelector, options) {
-      var opts = options || {};
-      var elements = document.querySelectorAll(selector);
-      elements.forEach(function (svg) {
-        ScrollTrigger.create({
-          trigger: triggerSelector || svg,
-          start: opts.start || 'top 80%',
-          once: true,
-          onEnter: function () {
-            drawOnDoodle(svg, opts);
-          }
-        });
-      });
-    }
-
-    /* ==========================================
-       HERO — Page load animations (not scroll)
-       ========================================== */
+    /* --- Hero (page load, not scroll) --- */
     var heroTl = gsap.timeline({ delay: 0.15 });
 
     heroTl
@@ -207,197 +104,82 @@
         opacity: 1, y: 0, duration: 0.5, ease: ease
       }, '-=0.25');
 
-    /* ==========================================
-       PROBLEM SECTION
-       ========================================== */
-    gsap.from('#problem .section-label', {
-      scrollTrigger: { trigger: '#problem', start: 'top 80%' },
-      opacity: 0, y: 20, duration: 0.5, ease: ease
+    /* --- Logo Bar --- */
+    gsap.from('.logo-bar-text', {
+      scrollTrigger: { trigger: '.logo-bar', start: 'top 90%' },
+      opacity: 0, y: 12, duration: 0.5, ease: ease
     });
 
-    gsap.from('#problem .section-headline', {
-      scrollTrigger: { trigger: '#problem', start: 'top 78%' },
-      opacity: 0, y: 20, duration: 0.6, ease: ease, delay: 0.1
-    });
-
-    gsap.from('.problem-body p', {
-      scrollTrigger: { trigger: '.problem-body', start: 'top 80%' },
-      opacity: 0, y: 20, duration: 0.5, stagger: 0.1, ease: ease
-    });
-
-    gsap.from('.problem-pivot', {
-      scrollTrigger: { trigger: '.problem-pivot', start: 'top 85%' },
-      opacity: 0, y: 16, duration: 0.6, ease: ease
-    });
-
-    /* ==========================================
-       SOLUTION SECTION
-       ========================================== */
-    gsap.from('#solution .section-label', {
-      scrollTrigger: { trigger: '#solution', start: 'top 80%' },
-      opacity: 0, y: 20, duration: 0.5, ease: ease
-    });
-
-    gsap.from('#solution .section-headline', {
-      scrollTrigger: { trigger: '#solution', start: 'top 78%' },
-      opacity: 0, y: 20, duration: 0.6, ease: ease, delay: 0.1
-    });
-
-    gsap.from('.solution-body p', {
-      scrollTrigger: { trigger: '.solution-body', start: 'top 82%' },
-      opacity: 0, y: 20, duration: 0.5, stagger: 0.1, ease: ease
-    });
-
-    /* ==========================================
-       METHOD / HOW IT WORKS
-       ========================================== */
-    gsap.from('.method-header', {
-      scrollTrigger: { trigger: '#method', start: 'top 80%' },
+    /* --- Featured Testimonial --- */
+    gsap.from('.featured-testimonial', {
+      scrollTrigger: { trigger: '.featured-testimonial-section', start: 'top 85%' },
       opacity: 0, y: 20, duration: 0.6, ease: ease
     });
 
-    gsap.from('.method-card', {
-      scrollTrigger: { trigger: '.method-grid', start: 'top 80%' },
-      opacity: 0, y: 24, duration: 0.6, stagger: 0.15, ease: ease
-    });
-
-    // Draw on step number circles
-    document.querySelectorAll('.method-card .doodle-circle').forEach(function (circle, i) {
-      ScrollTrigger.create({
-        trigger: '.method-grid',
-        start: 'top 80%',
-        once: true,
-        onEnter: function () {
-          drawOnDoodle(circle, { duration: 0.6, delay: i * 0.15 + 0.3 });
-        }
-      });
-    });
-
-    /* ==========================================
-       STATS / RESULTS
-       ========================================== */
-    gsap.from('.stats-headline', {
-      scrollTrigger: { trigger: '#results', start: 'top 80%' },
+    /* --- What We Do --- */
+    gsap.from('#what-we-do .section-headline', {
+      scrollTrigger: { trigger: '#what-we-do', start: 'top 80%' },
       opacity: 0, y: 20, duration: 0.6, ease: ease
     });
 
-    gsap.from('.stat-card', {
-      scrollTrigger: { trigger: '.stats-grid', start: 'top 85%' },
-      opacity: 0, y: 20, duration: 0.5, stagger: 0.1, ease: ease
+    gsap.from('#what-we-do .card', {
+      scrollTrigger: { trigger: '#what-we-do .cards-grid', start: 'top 82%' },
+      opacity: 0, y: 24, duration: 0.6, stagger: 0.12, ease: ease, clearProps: 'all'
     });
 
-    // Count-up animation
-    ScrollTrigger.create({
-      trigger: '.stats-grid',
-      start: 'top 85%',
-      once: true,
-      onEnter: function () {
-        document.querySelectorAll('.stat-card').forEach(function (card) {
-          var numberEl = card.querySelector('.stat-number');
-          var type = card.getAttribute('data-type');
-
-          if (type === 'text') {
-            var text = card.getAttribute('data-value');
-            animateTypeIn(numberEl, text, 400);
-          } else {
-            var value = parseInt(card.getAttribute('data-value'), 10);
-            var suffix = card.getAttribute('data-suffix') || '';
-            animateCountUp(numberEl, value, suffix, 800);
-          }
-        });
-      }
+    gsap.from('.bonus-line', {
+      scrollTrigger: { trigger: '.bonus-line', start: 'top 90%' },
+      opacity: 0, y: 12, duration: 0.5, ease: ease
     });
 
-    // Draw on stat circles
-    document.querySelectorAll('.doodle-stat-circle').forEach(function (svg, i) {
-      ScrollTrigger.create({
-        trigger: '.stats-grid',
-        start: 'top 85%',
-        once: true,
-        onEnter: function () {
-          drawOnDoodle(svg, { duration: 0.7, delay: i * 0.15 + 0.2 });
-        }
-      });
-    });
-
-    gsap.from('.stats-subtext', {
-      scrollTrigger: { trigger: '.stats-subtext', start: 'top 90%' },
-      opacity: 0, y: 16, duration: 0.5, ease: ease
-    });
-
-    /* ==========================================
-       TESTIMONIALS
-       ========================================== */
-    gsap.from('.testimonials-headline', {
-      scrollTrigger: { trigger: '#testimonials', start: 'top 80%' },
-      opacity: 0, y: 20, duration: 0.6, ease: ease
-    });
-
+    /* --- Testimonials --- */
     gsap.from('.testimonial-card', {
       scrollTrigger: { trigger: '.testimonials-grid', start: 'top 82%' },
-      opacity: 0, y: 24, duration: 0.6, stagger: 0.1, ease: ease
+      opacity: 0, y: 24, duration: 0.6, stagger: 0.1, ease: ease, clearProps: 'all'
     });
 
-    /* ==========================================
-       WHO THIS IS FOR
-       ========================================== */
-    gsap.from('#who .section-headline', {
-      scrollTrigger: { trigger: '#who', start: 'top 80%' },
+    /* --- Offers --- */
+    gsap.from('#offers .section-headline', {
+      scrollTrigger: { trigger: '#offers', start: 'top 80%' },
       opacity: 0, y: 20, duration: 0.6, ease: ease
     });
 
-    gsap.from('.who-intro', {
-      scrollTrigger: { trigger: '#who', start: 'top 78%' },
-      opacity: 0, y: 16, duration: 0.5, ease: ease, delay: 0.1
+    gsap.from('.offer-card', {
+      scrollTrigger: { trigger: '#offers .cards-grid', start: 'top 82%' },
+      opacity: 0, y: 24, duration: 0.6, stagger: 0.1, ease: ease, clearProps: 'all'
     });
 
-    gsap.from('.who-item', {
-      scrollTrigger: { trigger: '.who-list', start: 'top 82%' },
-      opacity: 0, y: 16, duration: 0.5, stagger: 0.1, ease: ease
+    gsap.from('.offers-cta-text', {
+      scrollTrigger: { trigger: '.offers-cta-text', start: 'top 90%' },
+      opacity: 0, y: 12, duration: 0.5, ease: ease
     });
 
-    gsap.from('.who-closing', {
-      scrollTrigger: { trigger: '.who-closing', start: 'top 88%' },
-      opacity: 0, y: 16, duration: 0.5, ease: ease
-    });
-
-    /* ==========================================
-       GUARANTEE
-       ========================================== */
+    /* --- Guarantee --- */
     gsap.from('.guarantee-block', {
       scrollTrigger: { trigger: '#guarantee', start: 'top 80%' },
       opacity: 0, y: 20, duration: 0.7, ease: ease
     });
 
-    /* ==========================================
-       ABOUT
-       ========================================== */
-    gsap.from('.about-image-wrapper', {
-      scrollTrigger: { trigger: '#about', start: 'top 75%' },
-      opacity: 0, x: -24, duration: 0.7, ease: ease
+    /* --- About --- */
+    gsap.from('.about-text', {
+      scrollTrigger: { trigger: '#about', start: 'top 78%' },
+      opacity: 0, y: 20, duration: 0.6, ease: ease
     });
 
-    gsap.from('.about-text-col .section-headline', {
-      scrollTrigger: { trigger: '#about', start: 'top 75%' },
-      opacity: 0, y: 20, duration: 0.6, ease: ease, delay: 0.1
+    gsap.from('.about-headshot', {
+      scrollTrigger: { trigger: '#about', start: 'top 78%' },
+      opacity: 0, x: 24, duration: 0.7, ease: ease, delay: 0.1
     });
 
-    gsap.from('.about-text-col p', {
-      scrollTrigger: { trigger: '.about-text-col', start: 'top 78%' },
-      opacity: 0, y: 16, duration: 0.5, stagger: 0.08, ease: ease, delay: 0.2
-    });
-
-    /* ==========================================
-       FINAL CTA
-       ========================================== */
+    /* --- Final CTA --- */
     gsap.from('.final-cta-headline', {
       scrollTrigger: { trigger: '.final-cta-content', start: 'top 85%' },
       opacity: 0, y: 20, duration: 0.7, ease: ease
     });
 
-    gsap.from('.final-cta-content p', {
+    gsap.from('.final-cta-sub', {
       scrollTrigger: { trigger: '.final-cta-content', start: 'top 83%' },
-      opacity: 0, y: 16, duration: 0.5, stagger: 0.1, ease: ease, delay: 0.15
+      opacity: 0, y: 16, duration: 0.5, ease: ease, delay: 0.15
     });
 
     gsap.from('.final-cta-buttons', {
@@ -405,28 +187,7 @@
       opacity: 0, y: 16, duration: 0.6, ease: ease
     });
 
-    // Subtle CTA glow pulse
-    ScrollTrigger.create({
-      trigger: '.final-cta-buttons .btn-primary',
-      start: 'top 90%',
-      once: true,
-      onEnter: function () {
-        gsap.fromTo('.final-cta-buttons .btn-primary',
-          { boxShadow: '0 2px 8px rgba(242, 75, 46, 0.2)' },
-          {
-            boxShadow: '0 4px 20px rgba(242, 75, 46, 0.35)',
-            duration: 1,
-            ease: easeInOut,
-            yoyo: true,
-            repeat: 1,
-          }
-        );
-      }
-    });
-
-    /* ==========================================
-       FOOTER
-       ========================================== */
+    /* --- Footer --- */
     gsap.from('.footer-grid > *', {
       scrollTrigger: { trigger: '.site-footer', start: 'top 92%' },
       opacity: 0, y: 12, duration: 0.5, ease: ease
