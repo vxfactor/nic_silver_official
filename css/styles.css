@@ -883,9 +883,9 @@ h3 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 1.5rem;
+    gap: 2rem;
     background: var(--bg-cream);
-    z-index: 9998;
+    z-index: 10001;
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s ease;
@@ -903,7 +903,7 @@ h3 {
 
   .nav-toggle {
     display: flex;
-    z-index: 9999;
+    z-index: 10002;
   }
 
   .nav-toggle[aria-expanded="true"] .nav-toggle-bar:nth-child(1) {
@@ -1086,7 +1086,7 @@ h3 {
   }
 
   .nav-logo-img {
-    height: 36px;
+    height: 44px;
   }
 }
 
