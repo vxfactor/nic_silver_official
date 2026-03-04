@@ -1,28 +1,41 @@
 /* ==========================================================================
-   Flodesk Form Embed — Silver AI Consulting
+   Voice DNA Codex Modal — Silver AI Consulting
    ========================================================================== */
 
-(function (w, d, t, h, s, n) {
-  w.FlodeskObject = n;
-  var fn = function () {
-    (w[n].q = w[n].q || []).push(arguments);
-  };
-  w[n] = w[n] || fn;
-  var f = d.getElementsByTagName(t)[0];
-  var v = '?v=' + Math.floor(new Date().getTime() / (120 * 1000)) * 60;
-  var sm = d.createElement(t);
-  sm.async = true;
-  sm.type = 'module';
-  sm.src = h + s + '.mjs' + v;
-  f.parentNode.insertBefore(sm, f);
-  var sn = d.createElement(t);
-  sn.async = true;
-  sn.noModule = true;
-  sn.src = h + s + '.js' + v;
-  f.parentNode.insertBefore(sn, f);
-})(window, document, 'script', 'https://assets.flodesk.com', '/universal', 'fd');
+document.addEventListener('DOMContentLoaded', function () {
+  var modal = document.getElementById('voice-dna-modal');
+  var btn = document.getElementById('voice-dna-btn');
+  var closeBtn = document.getElementById('modal-close');
+  var iframe = document.getElementById('fd-iframe');
+  var loaded = false;
 
-window.fd('form', {
-  formId: '6971eaa95705353f2cd054e0',
-  containerEl: '#fd-form-6971eaa95705353f2cd054e0',
+  if (!modal || !btn || !closeBtn || !iframe) return;
+
+  function openModal() {
+    modal.classList.add('is-open');
+    document.body.style.overflow = 'hidden';
+
+    if (!loaded) {
+      iframe.src = 'https://aiwithsoul.myflodesk.com/cejr8k47os';
+      loaded = true;
+    }
+  }
+
+  function closeModal() {
+    modal.classList.remove('is-open');
+    document.body.style.overflow = '';
+  }
+
+  btn.addEventListener('click', openModal);
+  closeBtn.addEventListener('click', closeModal);
+
+  modal.addEventListener('click', function (e) {
+    if (e.target === modal) closeModal();
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && modal.classList.contains('is-open')) {
+      closeModal();
+    }
+  });
 });

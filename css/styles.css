@@ -373,11 +373,16 @@ h3 {
 .hero-secondary-cta {
   font-size: 0.9375rem;
   font-weight: 500;
+  font-family: inherit;
   color: var(--text-primary);
   text-decoration: underline;
   text-underline-offset: 3px;
   text-decoration-color: var(--border);
   transition: text-decoration-color 0.2s ease;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
 }
 
 .hero-secondary-cta:hover {
@@ -1087,6 +1092,81 @@ h3 {
 
   .nav-logo-img {
     height: 44px;
+  }
+}
+
+/* ==========================================================================
+   VOICE DNA CODEX MODAL
+   ========================================================================== */
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: rgba(73, 59, 53, 0.6);
+}
+
+.modal-overlay.is-open {
+  display: flex;
+}
+
+.modal-content {
+  position: relative;
+  background: var(--bg-white);
+  border-radius: 12px;
+  padding: 0;
+  max-width: 700px;
+  width: 96%;
+  height: 85vh;
+  overflow: hidden;
+}
+
+#fd-iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 12px;
+}
+
+.modal-close {
+  position: fixed;
+  top: calc(5vh - 20px);
+  right: calc(50% - 360px);
+  background: var(--bg-white);
+  border: 1px solid var(--border);
+  font-size: 1.5rem;
+  line-height: 1;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  cursor: pointer;
+  padding: 0;
+  z-index: 10000;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.modal-close:hover {
+  color: var(--text-primary);
+  background: var(--bg-white);
+}
+
+.modal-close:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+  .modal-close {
+    top: 4px;
+    right: 4px;
   }
 }
 

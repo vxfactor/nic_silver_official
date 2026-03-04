@@ -74,11 +74,11 @@
     <section class="hero" id="hero">
       <div class="container hero-container">
         <div class="hero-content">
-          <h1 class="hero-headline">Scale your marketing without the headcount.</h1>
+          <h1 class="hero-headline">Scale your marketing without increasing headcount.</h1>
           <p class="hero-sub">AI systems that help your team create on-brand content and marketing assets faster. Without sacrificing quality.</p>
           <div class="hero-ctas">
             <a href="https://tidycal.com/nicsilver/lets-talk" class="btn btn-primary btn-lg"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> Book a Discovery Call</a>
-            <a href="#solution" class="hero-secondary-cta">Learn More</a>
+            <button type="button" class="hero-secondary-cta" id="voice-dna-btn">Get Voice DNA Codex</button>
           </div>
         </div>
       </div>
@@ -108,7 +108,7 @@
          ============================================ -->
     <section class="section section-beige" id="what-we-do">
       <div class="container">
-        <h2 class="section-headline text-center">Faster content. Better assets. No new hires.</h2>
+        <h2 class="section-headline text-center">High-quality marketing assets faster. No new hires.</h2>
 
         <div class="cards-grid cards-3">
           <div class="card">
@@ -196,7 +196,7 @@
               <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
             </div>
             <h3 class="card-title">ContentFlow OS</h3>
-            <p class="card-body">Your complete AI content system. Plugin-and-play, adapted to your team. Effortlessly ideate, create, repurpose and distribute content for multiple brands. All from one place for your entire team.</p>
+            <p class="card-body">Your complete AI content system. Plug-and-play, adapted to your team. Effortlessly ideate, create, repurpose and distribute content for multiple brands. All from one place for your entire team.</p>
           </div>
         </div>
 
@@ -229,9 +229,9 @@
 
             <p>The one common denominator? Marketing. So I know first-hand how important it is for business success.</p>
 
-            <p>When AI was released in 2022, I immediately taught myself to code so I could build with it. I know how frustrating using AI for marketing can be if you don't get it right.</p>
+            <p>When AI was released in 2022, I taught myself to code so I could build with it. It immediately became clear what limitations AI had and I soon learned how to overcome them to produce real results.</p>
 
-            <p>But through trial and error I've built systems, both for myself and clients, that save time, generate more revenue, and improve the quality of marketing assets.</p>
+            <p>Through trial and error I've built systems, both for myself and clients, that not only save time and generate more revenue, but also improve the quality of marketing assets.</p>
 
             <p>If you're looking to go beyond the hype and actually get real results, I'm happy to help.</p>
             <div class="about-links">
@@ -252,7 +252,7 @@
     <section class="section section-dark" id="book">
       <div class="container">
         <div class="final-cta-content">
-          <h2 class="section-headline final-cta-headline">Let's find where you're leaving time and money on the table.</h2>
+          <h2 class="section-headline final-cta-headline">Book a free call and we'll find exactly where you're losing money.</h2>
           <div class="final-cta-buttons">
             <a href="https://tidycal.com/nicsilver/lets-talk" class="btn btn-primary btn-lg"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> Book a Discovery Call</a>
           </div>
@@ -287,9 +287,18 @@
     <a href="https://tidycal.com/nicsilver/lets-talk" class="btn btn-primary mobile-cta-btn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg> Book a Discovery Call</a>
   </div>
 
+  <!-- Voice DNA Codex Modal -->
+  <div class="modal-overlay" id="voice-dna-modal" role="dialog" aria-label="Get Voice DNA Codex">
+    <button type="button" class="modal-close" id="modal-close" aria-label="Close">&times;</button>
+    <div class="modal-content">
+      <iframe id="fd-iframe" src="about:blank" title="Get Voice DNA Codex" allowtransparency="true"></iframe>
+    </div>
+  </div>
+
   <!-- GSAP -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
   <script src="js/main.js" defer></script>
+  <script src="js/flodesk.js" defer></script>
 </body>
 </html>
