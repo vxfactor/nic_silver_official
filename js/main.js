@@ -128,7 +128,7 @@
     });
 
     /* What we build */
-    gsap.from('#what-we-build .section-eyebrow, #what-we-build .section-headline', {
+    gsap.from('#what-we-build .section-eyebrow, #what-we-build .section-headline, #what-we-build .section-intro', {
       scrollTrigger: { trigger: '#what-we-build', start: 'top 80%' },
       opacity: 0, y: 20, duration: 0.6, stagger: 0.08, ease: ease
     });
