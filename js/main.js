@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Silver AI v2 — Animations & Interactions
+   Silver AI v2: Animations & Interactions
    Minimal: opacity + small Y-translate, no parallax, no 3D
    ========================================================================== */
 
@@ -91,8 +91,22 @@
     return;
   }
 
+  var gsapAttempts = 0;
+
+  function showHeroFallback() {
+    document.querySelectorAll('.hero-headline, .hero-sub, .hero-ctas').forEach(function (el) {
+      el.style.opacity = '1';
+      el.style.transform = 'none';
+    });
+  }
+
   function initGSAP() {
     if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') {
+      gsapAttempts += 1;
+      if (gsapAttempts > 40) {
+        showHeroFallback();
+        return;
+      }
       setTimeout(initGSAP, 50);
       return;
     }
