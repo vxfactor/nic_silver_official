@@ -243,6 +243,12 @@ h3 { font-size: 1.125rem; }
   transform: translateY(20px);
 }
 
+/* Signature highlight: coral + italic Playfair on a keyword/phrase */
+.hl {
+  color: var(--accent);
+  font-style: italic;
+}
+
 .hero-sub {
   font-size: clamp(1rem, 1.5vw, 1.1875rem);
   font-weight: 400;
