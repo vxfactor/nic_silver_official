@@ -296,20 +296,24 @@ h3 { font-size: 1.125rem; }
 }
 
 .tool-logo {
-  font-family: var(--font-body);
-  font-weight: 500;
-  font-size: 1.125rem;
-  letter-spacing: -0.01em;
-  color: var(--text-primary);
-  opacity: 0.7;
+  display: flex;
+  align-items: center;
+  opacity: 0.55;
   transition: opacity 0.2s ease;
 }
 
+.tool-logo img {
+  height: 28px;
+  width: auto;
+  display: block;
+}
+
 .tool-logo-primary {
-  font-weight: 600;
-  font-size: 1.25rem;
-  opacity: 1;
-  color: var(--text-primary);
+  opacity: 0.9;
+}
+
+.tool-logo-primary img {
+  height: 32px;
 }
 
 .tool-logo:hover { opacity: 1; }
@@ -556,6 +560,43 @@ h3 { font-size: 1.125rem; }
   text-align: left;
 }
 
+/* Balanced two-up testimonial pair */
+.testimonials-pair {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  max-width: 980px;
+  margin: 1.25rem auto 4rem;
+}
+
+.testimonial-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: var(--bg-cream);
+  border: 1px solid var(--border);
+  padding: clamp(1.5rem, 3vw, 2.25rem);
+  box-shadow: 5px 5px 0 0 var(--text-primary);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+.testimonial-card:hover {
+  box-shadow: 7px 7px 0 0 var(--text-primary);
+  transform: translate(-2px, -2px);
+}
+
+.testimonial-card-quote {
+  font-family: var(--font-heading);
+  font-size: clamp(1rem, 1.5vw, 1.1875rem);
+  font-style: italic;
+  line-height: 1.55;
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 640px) {
+  .testimonials-pair { grid-template-columns: 1fr; margin-bottom: 3rem; }
+}
+
 .offers-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -675,7 +716,6 @@ h3 { font-size: 1.125rem; }
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: grayscale(100%) contrast(1.1);
 }
 
 .about-links { display: flex; gap: 1.25rem; margin-top: 1.5rem; }
