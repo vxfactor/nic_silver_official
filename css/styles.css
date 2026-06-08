@@ -1050,3 +1050,38 @@ h3 { font-size: 1.125rem; }
   .hero-sub,
   .hero-ctas { opacity: 1; transform: none; }
 }
+
+/* ===== Video demo (#see-it-running) ===== */
+.video-frame {
+  position: relative;
+  max-width: 960px;
+  margin: 2.5rem auto 0;
+  aspect-ratio: 16 / 9;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 18px 40px rgba(73, 59, 53, .18);
+  background: #000;
+}
+.demo-video { width: 100%; height: 100%; display: block; object-fit: cover; }
+.video-play {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 84px;
+  height: 84px;
+  border: none;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #fff;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  transition: transform .15s, background .15s;
+}
+.video-play:hover { background: var(--accent-hover); transform: scale(1.06); }
+.video-play svg { width: 38px; height: 38px; fill: currentColor; margin-left: 4px; }
+.video-frame.is-playing .video-play { display: none; }
+@media (max-width: 600px) {
+  .video-play { width: 64px; height: 64px; }
+  .video-play svg { width: 28px; height: 28px; }
+}

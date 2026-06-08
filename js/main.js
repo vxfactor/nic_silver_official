@@ -206,3 +206,19 @@
 
   initGSAP();
 })();
+
+/* Click-to-play for the video demo section */
+(function () {
+  document.querySelectorAll('.video-frame').forEach(function (frame) {
+    var btn = frame.querySelector('.video-play');
+    var vid = frame.querySelector('video');
+    if (!btn || !vid) return;
+    btn.addEventListener('click', function () {
+      frame.classList.add('is-playing');
+      vid.play();
+    });
+    vid.addEventListener('pause', function () {
+      if (vid.currentTime === 0) frame.classList.remove('is-playing');
+    });
+  });
+})();

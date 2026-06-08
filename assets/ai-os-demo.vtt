@@ -1,0 +1,691 @@
+WEBVTT
+
+00:00.038 --> 00:01.053
+Hey, I am Nik Silver.
+
+00:01.161 --> 00:04.884
+I am the founder of Silver AI Consulting,
+and today I wanna talk about the
+
+00:04.962 --> 00:08.469
+only AI implementation I think small
+to medium-sized businesses should
+
+00:08.515 --> 00:12.592
+be focusing on right now, which is
+something called an AI operating system.
+
+00:13.038 --> 00:17.899
+I wanna show you what it is, why it's such
+a game changer for businesses, and how you
+
+00:17.931 --> 00:21.992
+could get started on the journey towards
+building your own AI operating system
+
+00:22.398 --> 00:26.644
+by now most businesses have tried some
+form of AI solution in their business.
+
+00:26.659 --> 00:30.459
+This could be patching up an inefficiency
+in your workflow or trying to solve
+
+00:30.505 --> 00:34.091
+some form of bottleneck in your business
+that is taking up a lot of your effort
+
+00:34.136 --> 00:38.273
+and time and sure this might work
+to some extent, but it's not really
+
+00:38.319 --> 00:43.011
+providing the most amount of value
+that I see AI provide for a business.
+
+00:43.458 --> 00:47.074
+For AI to really be effective,
+it needs to have proper context
+
+00:47.219 --> 00:50.388
+and if you're only fixing one part of
+your business, the AI will have context
+
+00:50.434 --> 00:52.066
+on that specific part of your business.
+
+00:52.466 --> 00:56.958
+But with an AI operating system, your
+AI agents will not only have context on
+
+00:57.020 --> 01:00.804
+one small part of your business, it will
+have the context of your entire business.
+
+01:01.050 --> 01:03.604
+You can think of it as an
+operating system on your computer,
+
+01:03.943 --> 01:05.420
+which hosts all your apps.
+
+01:05.697 --> 01:10.066
+So in a similar fashion, the AI
+operating system holds all your business
+
+01:10.128 --> 01:14.481
+processes, all the tools you use, and
+combines them into one coherent system
+
+01:14.668 --> 01:18.483
+And the benefits of having an AI operating
+system like this is that AI truly
+
+01:18.637 --> 01:20.283
+understands your business as a whole.
+
+01:20.576 --> 01:23.683
+It can look at your revenue numbers,
+it can look at your marketing, your
+
+01:23.899 --> 01:27.222
+sales call transcripts, and look
+for opportunities where you are
+
+01:27.315 --> 01:30.238
+leaving money on the table or where
+you're missing out on opportunities
+
+01:30.477 --> 01:32.693
+And at a high level, the way
+the system works is that the AI
+
+01:32.738 --> 01:34.431
+itself acts kinda like a brain.
+
+01:34.477 --> 01:35.846
+It's the orchestrator of the system.
+
+01:35.954 --> 01:38.816
+It will look at all the data
+and come up with suggestions on
+
+01:38.861 --> 01:39.954
+what it thinks should happen.
+
+01:40.461 --> 01:43.031
+Then either it goes and do it
+automatically, depending on the task,
+
+01:43.169 --> 01:46.308
+or it, it presents the information to
+you where you can make the decision.
+
+01:46.692 --> 01:49.492
+Then it has access to tools
+where it can actually go out
+
+01:49.585 --> 01:51.569
+and take actions on your behalf.
+
+01:51.861 --> 01:56.093
+And finally, and this is the most powerful
+feature in my opinion, is the memory.
+
+01:56.123 --> 01:58.631
+This means that the system
+only gets smarter over time.
+
+01:58.708 --> 02:02.308
+Unlike traditional software, this
+actually improves over time and
+
+02:02.339 --> 02:04.000
+becomes better the more you use it
+
+02:04.249 --> 02:07.003
+for this example, we're going
+to use an upcoming sales call.
+
+02:07.403 --> 02:10.665
+So there's a trigger that happens
+first, and that is when the prospect
+
+02:10.741 --> 02:12.433
+gets booked onto your calendar.
+
+02:12.926 --> 02:17.033
+This tells another AI agent that, hey,
+we need to inform the user of the system
+
+02:17.080 --> 02:18.910
+that they have an upcoming sales call.
+
+02:19.065 --> 02:21.880
+But not only that, you're gonna have
+another agent that's gonna go out
+
+02:21.926 --> 02:24.787
+and do research on this prospect
+by looking at their LinkedIn, their
+
+02:24.818 --> 02:28.034
+official website, and then gonna fetch
+back information that is relevant
+
+02:28.095 --> 02:29.664
+for the context of the sales call.
+
+02:30.111 --> 02:33.064
+And not only that, another agent
+is going to have access to all
+
+02:33.126 --> 02:36.511
+previous sales calls, so it knows
+what type of objections comes up.
+
+02:36.556 --> 02:39.449
+So this way, we can preemptively
+address them before the even
+
+02:39.526 --> 02:40.556
+prospect brings them up.
+
+02:40.954 --> 02:43.524
+Coming into a sales call like
+this is gonna prepare you a lot
+
+02:43.554 --> 02:46.616
+better and is going to increase the
+likelihood of you closing the sale.
+
+02:46.678 --> 02:47.693
+Obviously, it's not a guarantee.
+
+02:47.754 --> 02:50.566
+It depends on the skill of the
+salesperson, obviously But for the sake
+
+02:50.597 --> 02:53.751
+of this example, let's say that the
+prospect is interested in working with us.
+
+02:54.089 --> 02:57.982
+So once the call ends, that triggers
+a new AI agent to draft a proposal
+
+02:58.028 --> 02:59.720
+immediately for your review.
+
+02:59.766 --> 03:02.074
+You'll go over it and make sure
+that everything is in order, and
+
+03:02.121 --> 03:04.659
+with the click of a button, you
+will send that off to the prospect
+
+03:05.096 --> 03:07.819
+In addition to this, the agent has
+also provided a place for where the
+
+03:07.865 --> 03:11.019
+prospect can put a signature and
+a link to collect their payment.
+
+03:11.311 --> 03:14.496
+And just like that, in one email,
+they have the proposal, uh, the
+
+03:14.558 --> 03:17.711
+ability to agree to the proposal
+and pay all in one go, so you don't
+
+03:17.773 --> 03:19.034
+have to have this back and forth.
+
+03:19.430 --> 03:22.307
+And once they've accepted the proposal
+and signed it and made a payment,
+
+03:22.645 --> 03:25.938
+that is going to trigger the next
+event, which is the onboarding flow.
+
+03:26.230 --> 03:29.061
+And of course, once this process
+is finished, it's going to log
+
+03:29.107 --> 03:32.060
+each step in its memory so it,
+it becomes better over time
+
+03:32.595 --> 03:36.087
+So hopefully by sharing this example, it
+has sparked your imagination and given
+
+03:36.118 --> 03:39.411
+you an idea of what an AI operating
+system can do for your business.
+
+03:39.607 --> 03:43.253
+so here we are inside my own AI operating
+system, and if you used AI before, this
+
+03:43.285 --> 03:44.561
+is going to look very familiar to you.
+
+03:44.930 --> 03:48.038
+It's essentially just a chat window,
+but don't let that fool you because
+
+03:48.069 --> 03:49.500
+there's a lot going on under the hood.
+
+03:49.750 --> 03:51.934
+Here I can ask it questions
+or give it commands.
+
+03:51.996 --> 03:54.611
+I can ask something like, "Is there
+anything that needs my attention right
+
+03:54.688 --> 03:58.643
+now?" And since it knows me and my
+business and has access to all my tools,
+
+03:58.966 --> 04:02.396
+it will be able to see if I need to answer
+emails, if I have meetings coming up.
+
+04:02.673 --> 04:04.242
+Is there a new lead in my pipeline?
+
+04:04.474 --> 04:05.673
+Do I need to follow up with someone?
+
+04:06.058 --> 04:09.550
+A simple, vague prompt like that
+is all the AI needs because it
+
+04:09.643 --> 04:11.135
+has all the context it needs.
+
+04:11.367 --> 04:13.335
+You don't have to prompt
+engineer anything here.
+
+04:13.628 --> 04:15.674
+You can just talk to it like
+you would talk to a colleague
+
+04:16.133 --> 04:19.164
+So to illustrate this, I'm just gonna
+have it look through some of my trusted
+
+04:19.210 --> 04:23.241
+sources, which I have predefined, and
+see if it can find any content ideas that
+
+04:23.288 --> 04:24.841
+would be relevant for me and my brand
+
+04:25.070 --> 04:27.608
+So as you can see, it's now running
+the task for me, and while we wait for
+
+04:27.654 --> 04:30.854
+that, I can just show you the dashboard
+that also comes with this system.
+
+04:30.900 --> 04:34.377
+This is more of like a visual
+layer to the AI operating system,
+
+04:34.439 --> 04:37.023
+and this gives you just a quick
+overview of what is happening.
+
+04:37.347 --> 04:40.762
+So I have a dashboard here I can view
+daily, which just gives me an overview
+
+04:40.808 --> 04:43.700
+of what needs to happen, like the
+follow-ups I need to do or the emails
+
+04:43.732 --> 04:45.147
+that need my attention right away.
+
+04:45.300 --> 04:46.423
+Do I have anything booked in the calendar?
+
+04:46.639 --> 04:48.777
+I'm not gon- I'm not gonna click
+it now because there's, you know,
+
+04:48.839 --> 04:49.854
+obviously private information there.
+
+04:50.163 --> 04:52.670
+But I also have things like
+how is my system performing?
+
+04:53.070 --> 04:54.593
+Uh, check, you know, the latest audit.
+
+04:54.608 --> 04:56.085
+How well did the latest audit do?
+
+04:56.116 --> 04:58.070
+This is just a nice visual layer to have.
+
+04:58.117 --> 05:01.823
+I wouldn't say it's essential, um,
+'cause most of the time I spend here
+
+05:01.854 --> 05:04.708
+in the chat window And here we have a
+visual representation of the memory.
+
+05:04.754 --> 05:08.077
+You can see here all the information that
+gets stored gets connected like this.
+
+05:08.123 --> 05:11.278
+So it doesn't have, you know, a piece
+of information just stored in isolation.
+
+05:11.632 --> 05:14.832
+It, it connects all the information
+it gets in a meaningful way, and
+
+05:14.862 --> 05:18.663
+this is just a cool way to illustrate
+how the AI system lear-- or the AI
+
+05:18.770 --> 05:20.554
+operating system learns over time.
+
+05:20.754 --> 05:24.062
+It makes these different connections
+as, you teach it things, as it
+
+05:24.109 --> 05:26.662
+gets smarter, as it learns your
+business and how you do things
+
+05:26.945 --> 05:27.498
+So here it's done.
+
+05:27.545 --> 05:31.529
+It's gone through my sources and looked
+for any changes in the last 48 hours, if
+
+05:31.545 --> 05:35.914
+they posted anything new, and it has then
+suggested ideas for content I could do.
+
+05:36.237 --> 05:38.976
+And this is all filtered through,
+my business, what is relevant for
+
+05:39.098 --> 05:41.006
+me, what is relevant for my clients.
+
+05:41.052 --> 05:43.668
+Is there anything I need to take
+note of that might improve my
+
+05:43.745 --> 05:45.098
+services or anything like that?
+
+05:45.468 --> 05:48.360
+And you can see, I can just go through
+this, and if there's anything that
+
+05:48.407 --> 05:51.652
+catches my eye, I can just simply
+tell AI to execute on the idea.
+
+05:51.699 --> 05:54.298
+If it's a piece of content, I can tell
+it, "Hey, can you draft out a piece of
+
+05:54.345 --> 05:57.145
+content based on this?" Uh, and it will
+have access to everything it needs.
+
+05:57.192 --> 05:58.952
+It knows my voice, it knows my history.
+
+05:59.229 --> 06:00.798
+It has access to case studies.
+
+06:01.152 --> 06:03.075
+So you don't get that
+typical generic stuff.
+
+06:03.137 --> 06:06.760
+Or if it is like a technical thing
+I can tell, "Hey, can we update our
+
+06:06.837 --> 06:11.175
+system and try this out, run a trial
+period with this new, uh, framework
+
+06:11.222 --> 06:12.329
+we found?" Or something like that.
+
+06:12.360 --> 06:15.545
+So it's just insanely useful for
+me, uh, to be able to do this.
+
+06:15.576 --> 06:18.852
+But this is just, one of hundreds
+of examples of what you can
+
+06:18.883 --> 06:20.961
+do with an AI operating system
+
+06:21.027 --> 06:24.411
+So as you saw in my demo, I was working
+within a chat window that looked very
+
+06:24.473 --> 06:27.904
+similar to what you might be used
+to, something like ChatGPT or Claude.
+
+06:27.934 --> 06:30.150
+But the difference here is
+that this is not a regular
+
+06:30.273 --> 06:32.027
+chatbot, it's an agent harness.
+
+06:32.365 --> 06:33.196
+You might have heard of these.
+
+06:33.257 --> 06:38.288
+These are called Claude Code, uh, Claude
+Cowork, or, uh, OpenAI's, uh, Codex.
+
+06:38.304 --> 06:39.965
+These are all agent harnesses.
+
+06:39.997 --> 06:43.027
+And the only thing you need to know
+about these is that this is where we
+
+06:43.088 --> 06:44.965
+will contain the AI operating system.
+
+06:44.997 --> 06:47.811
+This is where we will have all
+the necessary files that the AI
+
+06:47.857 --> 06:51.689
+need to access, all the scripts
+the AI need to execute tasks.
+
+06:51.757 --> 06:54.896
+Which agent harness you decide to
+use depends entirely on taste and
+
+06:54.942 --> 06:56.927
+preferences and how technical you are.
+
+06:56.973 --> 06:58.911
+They all essentially do the same thing.
+
+06:58.942 --> 07:01.035
+They're just slight variations
+to how they function
+
+07:01.330 --> 07:03.822
+and I really wanna drive home
+the point that the AI operating
+
+07:03.915 --> 07:05.653
+system only gets better over time.
+
+07:06.038 --> 07:09.407
+Unlike traditional tech stocks
+that gets more bloated and complex
+
+07:09.454 --> 07:13.007
+over time, the AI operating system
+operates in the complete opposite way.
+
+07:13.130 --> 07:15.838
+It finds inefficiencies, it
+finds the way you prefer to
+
+07:15.931 --> 07:17.407
+work, and optimizes for that.
+
+07:17.469 --> 07:21.069
+It removes inefficiencies and bottlenecks,
+and the more you use it, the better it
+
+07:21.099 --> 07:24.917
+becomes at doing this That's why after
+a while, your operating system is going
+
+07:24.931 --> 07:28.070
+to look completely different from your
+competitor's operating system as it will
+
+07:28.116 --> 07:30.440
+be tailored to your specific business.
+
+07:30.662 --> 07:33.893
+Yes, the foundation of how to build an
+AI operating system technically will
+
+07:33.924 --> 07:37.216
+always remain the same, but it's when
+you're using it, you're really starting
+
+07:37.231 --> 07:41.231
+to make it your own, and that's where
+the real value in the system comes in
+
+07:41.702 --> 07:45.594
+So the next obvious question then
+becomes how do we build this practically?
+
+07:45.917 --> 07:49.426
+And the way I recommend approaching this
+is to just build this for one person
+
+07:49.440 --> 07:53.121
+to begin with, and that is usually the
+founder And once we have that foundation,
+
+07:53.197 --> 07:57.182
+we can simply replicate what we build
+and give each team member their own
+
+07:57.289 --> 07:59.028
+version of that AI operating system
+
+07:59.353 --> 08:02.245
+of course, all these systems across
+your team is going to have shared
+
+08:02.322 --> 08:04.030
+context across your entire business.
+
+08:04.323 --> 08:09.245
+But each member has the ability now to
+customize their operating system to how
+
+08:09.291 --> 08:13.214
+they like to work because no two people
+like to work in the exact same way.
+
+08:13.553 --> 08:17.584
+This way you essentially give your team
+superpowers and instead of replacing
+
+08:17.631 --> 08:20.615
+your team with AI, you're actually
+making your team more effective
+
+08:20.770 --> 08:24.525
+So how do we get started building your own
+version one of the AI operating system?
+
+08:24.586 --> 08:28.140
+Well, it always starts in the same
+way, and that is with an AI audit.
+
+08:28.493 --> 08:31.879
+And I know no one wants to do an
+audit, but it's absolutely necessary to
+
+08:31.909 --> 08:36.963
+understand how your business work, what
+processes, um, you have, what software
+
+08:37.024 --> 08:42.270
+you use, how the data flows, and then map
+out where are the inefficiencies, where
+
+08:42.378 --> 08:46.009
+are the bottlenecks, and then we can rank
+them based on how much they impact revenue
+
+08:46.056 --> 08:47.455
+and how much of a time sink they are.
+
+08:47.778 --> 08:51.179
+That way, when we build out the AI
+operating system, we know where to start
+
+08:51.224 --> 08:55.957
+for you to see results as quickly as
+possible If you wanna build out your own
+
+08:56.035 --> 08:57.557
+AI operating system, I'd love to help.
+
+08:57.880 --> 09:01.173
+You can reach me via email or shoot me
+a DM over at LinkedIn, or you can just
+
+09:01.219 --> 09:05.588
+go to my official website and click on
+the Book a Free Call button to book in
+
+09:05.619 --> 09:09.034
+a call to see if we're a good fit Either
+way, I hope this has inspired you and
+
+09:09.064 --> 09:12.695
+given you some ideas for how you can
+implement AI into your own business, and
+
+09:12.726 --> 09:14.695
+finally see some real results with AI
