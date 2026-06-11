@@ -584,6 +584,13 @@ h3 { font-size: 1.125rem; }
   transform: translate(-2px, -2px);
 }
 
+.testimonial-case-link {
+  display: inline-block;
+  margin-top: 1rem;
+  font-size: 0.875rem;
+  align-self: flex-start;
+}
+
 .testimonial-card-quote {
   font-family: var(--font-heading);
   font-size: clamp(1rem, 1.5vw, 1.1875rem);

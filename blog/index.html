@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Field notes | Silver AI Consulting</title>
+  <meta name="description" content="Notes on AI systems for agencies and small businesses, from Nic Silver.">
+  <link rel="canonical" href="https://nicsilver.com/blog/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Silver AI Consulting Field Notes">
+  <meta property="og:description" content="Notes on AI systems for agencies and small businesses, from Nic Silver.">
+  <meta property="og:url" content="https://nicsilver.com/blog/">
+
+  <link rel="alternate" type="application/rss+xml" title="Silver AI Consulting Field Notes" href="https://nicsilver.com/blog/feed.xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/styles.css">
+
+  <!-- Privacy-friendly analytics by Plausible -->
+  <script async src="https://plausible.io/js/pa-epPanSVTRBX1sh0HeqqIw.js"></script>
+  <script>
+    window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+    plausible.init()
+  </script>
+
+  <!-- Leadsy visitor identification -->
+  <script id="vtag-ai-js" async src="https://r2.leadsy.ai/tag.js" data-pid="mOKoQ1p1P3jVo0CY" data-version="062024"></script>
+
+  <style>
+    /* Brand tokens redefined locally so the index renders correctly even
+       if /css/styles.css fails to load. Match the site's :root values. */
+    :root {
+      --bg-cream: #f5f1ee;
+      --bg-beige: #e8e2de;
+      --bg-white: #feffff;
+      --bg-dark: #493b35;
+      --text-primary: #493b35;
+      --text-secondary: #7a6b62;
+      --text-on-dark: #feffff;
+      --accent: #f24b2e;
+      --accent-hover: #d93e23;
+      --border: #d9d0c9;
+      --font-heading: 'Playfair Display', Georgia, serif;
+      --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      --nav-height: 72px;
+      --radius: 0;
+    }
+    body {
+      font-family: var(--font-body);
+      font-size: 1rem;
+      line-height: 1.6;
+      color: var(--text-primary);
+      background-color: var(--bg-cream);
+      margin: 0;
+    }
+    img { max-width: 100%; height: auto; display: block; }
+    a { color: inherit; text-decoration: none; }
+    ul { list-style: none; }
+
+    .blog-index {
+      padding: calc(var(--nav-height) + 3rem) 0 5rem;
+      background: var(--bg-cream);
+    }
+    .blog-hero {
+      max-width: 720px;
+      margin: 0 auto 3rem;
+      padding: 0 1.5rem;
+      text-align: center;
+    }
+    .blog-hero-eyebrow {
+      font-family: var(--font-body);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+    .blog-hero-title {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: clamp(2.25rem, 5vw, 3.25rem);
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      margin: 0 0 1rem;
+    }
+    .blog-hero-sub {
+      font-size: 1.0625rem;
+      line-height: 1.6;
+      color: var(--text-secondary);
+      margin: 0;
+    }
+
+    .blog-grid {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      display: grid;
+      gap: 2rem;
+    }
+    @media (min-width: 720px) {
+      .blog-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    .blog-card {
+      display: flex;
+      flex-direction: column;
+      text-decoration: none;
+      background: var(--bg-white);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .blog-card:hover {
+      transform: translate(-2px, -2px);
+      box-shadow: 4px 4px 0 0 var(--text-primary);
+    }
+    .blog-card-image {
+      width: 100%;
+      aspect-ratio: 1200 / 630;
+      overflow: hidden;
+      background: var(--bg-beige);
+    }
+    .blog-card-image img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+    .blog-card-body { padding: 1.25rem 1.5rem 1.75rem; }
+    .blog-card-meta {
+      font-size: 0.75rem;
+      color: var(--text-secondary);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 0.75rem;
+    }
+    .blog-card-title {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 1.375rem;
+      line-height: 1.25;
+      letter-spacing: -0.01em;
+      margin: 0 0 0.5rem;
+      color: var(--text-primary);
+    }
+    .blog-card-preheader {
+      font-size: 0.9375rem;
+      line-height: 1.5;
+      color: var(--text-secondary);
+      margin: 0;
+    }
+
+    .blog-empty {
+      max-width: 540px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      text-align: center;
+      color: var(--text-secondary);
+    }
+
+    .blog-subscribe-cta {
+      max-width: 720px;
+      margin: 4rem auto 0;
+      padding: 2.5rem 1.75rem;
+      background: var(--bg-dark);
+      color: var(--text-on-dark);
+      text-align: center;
+    }
+    .blog-subscribe-cta h2 {
+      font-family: var(--font-heading);
+      font-size: 1.625rem;
+      line-height: 1.25;
+      margin: 0 0 1.5rem;
+      color: var(--text-on-dark);
+    }
+
+    @media (max-width: 640px) {
+      .blog-index { padding: calc(var(--nav-height) + 1.5rem) 0 3rem; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#blog-main" class="skip-link">Skip to main content</a>
+
+  <header class="site-header" id="site-header">
+    <nav class="nav-container" aria-label="Main navigation">
+      <a href="/" class="nav-logo"><img src="https://res.cloudinary.com/drdkvqdzd/image/upload/v1772094064/silver_logo_transparent_vrvadv.png" alt="Silver AI Consulting" class="nav-logo-img"></a>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="/#what-we-build">What we build</a></li>
+        <li><a href="/#method">Method</a></li>
+        <li><a href="/#offers">Offers</a></li>
+        <li><a href="/#about">About</a></li>
+      </ul>
+
+      <a href="https://tidycal.com/nicsilver/intro-call" class="btn btn-primary nav-cta" data-cta="nav">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        Book a free call
+      </a>
+
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+    </nav>
+  </header>
+
+  <main id="blog-main" class="blog-index">
+    <div class="blog-hero">
+      <p class="blog-hero-eyebrow">Field notes</p>
+      <h1 class="blog-hero-title">Silver AI Consulting Field Notes</h1>
+      <p class="blog-hero-sub">Notes on AI systems for agencies and small businesses, from Nic Silver.</p>
+    </div>
+
+    <div class="blog-grid">
+<a class="blog-card" href="build-is-the-boring-part.html">  <div class="blog-card-image">    <img src="images/build-is-the-boring-part.jpg" alt="The build is the boring part" width="1200" height="630" loading="lazy">  </div>  <div class="blog-card-body">    <p class="blog-card-meta">May 22, 2026 · 3 min read</p>    <h2 class="blog-card-title">The build is the boring part</h2>    <p class="blog-card-preheader">The audit is what makes the build worth doing.</p>  </div></a>
+    </div>
+
+    <div class="blog-subscribe-cta">
+      <h2>Want help with the AI side of your business?</h2>
+      <a class="btn btn-primary btn-lg" href="https://tidycal.com/nicsilver/intro-call" data-cta="blog-index">Book a free call</a>
+    </div>
+  </main>
+
+  <footer class="site-footer" id="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col footer-copyright">
+          <p>&copy; Silver AI Consulting 2026</p>
+        </div>
+        <div class="footer-col footer-links">
+          <a href="https://www.linkedin.com/in/thenicsilver/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+          <span class="footer-divider">|</span>
+          <a href="https://x.com/thenicsilver" aria-label="X" target="_blank" rel="noopener noreferrer"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+          <span class="footer-divider">|</span>
+          <a href="mailto:contact@nicsilver.com" aria-label="Email"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></a>
+          <span class="footer-divider">|</span>
+          <a href="https://tidycal.com/nicsilver/intro-call" aria-label="Book a Call" data-cta="footer"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Silver AI Support Bot. Same prospect chat as the homepage. -->
+  <link rel="stylesheet" href="../css/widget.css">
+  <script src="../js/widget.js"
+          data-endpoint="https://trustworthy-bird-999.convex.site/api/bot/prospect/chat"
+          defer></script>
+</body>
+</html>

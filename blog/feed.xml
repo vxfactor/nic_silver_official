@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+     xmlns:content="http://purl.org/rss/1.0/modules/content/"
+     xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Silver AI Consulting Field Notes</title>
+    <link>https://nicsilver.com/blog/</link>
+    <description>Notes on AI systems for agencies and small businesses, from Nic Silver.</description>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 16 May 2026 19:52:12 +0000</lastBuildDate>
+    <atom:link href="https://nicsilver.com/blog/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The build is the boring part</title>
+      <link>https://nicsilver.com/blog/build-is-the-boring-part.html</link>
+      <guid isPermaLink="true">https://nicsilver.com/blog/build-is-the-boring-part.html</guid>
+      <pubDate>Fri, 22 May 2026 09:00:00 +0000</pubDate>
+      <description>The audit is what makes the build worth doing.</description>
+      <enclosure url="https://nicsilver.com/blog/images/build-is-the-boring-part.jpg" type="image/jpeg" />
+      <content:encoded><![CDATA[<p>This week I shipped two short courses back to back. One on auditing your business before you bring AI into it. One on building the AI system after the audit tells you where to point it.</p>
+<p>People keep asking which one to start with.</p>
+<p>So here is the honest answer.</p>
+<p>The build is the boring part.</p>
+<p>That sounds wrong. Building is the part everyone wants to talk about. Which model. Which framework. Which platform. Which prompt template.</p>
+<p>None of that matters if you pointed it at the wrong workflow.</p>
+<p>The audit is what makes the build worth doing.</p>
+<p>The audit is the part where you sit with the actual work your business does every week and figure out which one piece of it, if it stopped breaking, would change your month.</p>
+<p>Not your year. Your month.</p>
+<p>That is the workflow you build first.</p>
+<p>Without the audit, you build something clever that nobody uses. With the audit, you build something boring that runs every Tuesday and saves you six hours.</p>
+<p>Here is where to start based on where you are.</p>
+<p>If you have never touched AI in your business, start with the audit course.</p>
+<p>It walks you through finding the one bottleneck worth fixing. You leave with a written list of three workflows ranked by time saved, revenue impact, and how easy each one is to automate. That list is the input to everything else.</p>
+<p>The audit course is here:
+<a href="https://audit-your-business-before-adding-ai.netlify.app">https://audit-your-business-before-adding-ai.netlify.app</a>
+If you already know your bottleneck and you are ready to build, the build course is the one.</p>
+<p>It is the 7 steps I follow when I turn an audit finding into a working AI system. Start with the week. Pick one pod. Write the spec. Memory in the right place. Human gates. The second builder. Watch the logs.</p>
+<p>The build course is here:
+<a href="https://ai-os-implementation-field-guide.netlify.app">https://ai-os-implementation-field-guide.netlify.app</a>
+You can read either one in under fifteen minutes. Both free. No signup. No email gate.</p>
+<p>Where this fits in my business.</p>
+<p>Both courses sit in front of how I actually work with clients.</p>
+<p>I run a paid AI audit for $2,000 that produces a ranked bottleneck list, a system map, and a prioritized plan.</p>
+<p>If the plan makes sense, I build the system for $5,000 if you are solo, or $10,000 if your team is in on the build.</p>
+<p>After that there is a monthly retainer at $3,500 if you want me on call to improve and extend the system as the business changes.</p>
+<p>The courses give you the framework for free. The paid work is me doing it with you, on your business, with your data.</p>
+<p>If you want to talk it through, my calendar is here:
+<a href="https://tidycal.com/nicsilver/intro-call">https://tidycal.com/nicsilver/intro-call</a>
+Bring the audit findings if you already have them. We can scope the build on the call.</p>
+<p>That is the funnel. Audit first. Then build.</p>
+<p>The boring half is what makes the interesting half pay for itself.</p>
+<p>Talk soon,
+Nic</p>]]></content:encoded>
+    </item>
+  </channel>
+</rss>
