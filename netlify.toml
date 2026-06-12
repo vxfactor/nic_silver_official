@@ -1,0 +1,5 @@
+# Netlify config. Build settings stay in the Netlify UI (static site, publish
+# root). This file only declares the serverless functions directory.
+
+[functions]
+  directory = "netlify/functions"

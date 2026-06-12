@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Workspace Tune-Up Kit | Silver AI Consulting</title>
+  <meta name="description" content="The gates and patterns that make a Claude Code workspace safe and cheap to run. Installed in 30 minutes. $199, 14-day money-back guarantee.">
+  <link rel="canonical" href="https://nicsilver.com/tune-up-kit.html">
+
+  <meta property="og:title" content="Workspace Tune-Up Kit | Silver AI Consulting">
+  <meta property="og:description" content="The gates and patterns that make a Claude Code workspace safe and cheap to run. Installed in 30 minutes.">
+  <meta property="og:type" content="product">
+  <meta property="og:url" content="https://nicsilver.com/tune-up-kit.html">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Workspace Tune-Up Kit">
+  <meta name="twitter:description" content="Make your Claude Code workspace safe and cheap to run. 30 minutes, twelve components, nothing phones home.">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Workspace Tune-Up Kit",
+    "description": "Twelve components that make a Claude Code or Codex workspace safe and cheap to run: a hard stop on destructive commands, an approval gate on outbound actions, a spend dashboard from local session logs, model routing, a third-party skill quarantine gate, and the pattern docs behind them. Installs in about 30 minutes.",
+    "brand": { "@type": "Organization", "name": "Silver AI Consulting" },
+    "offers": {
+      "@type": "Offer",
+      "price": "199",
+      "priceCurrency": "USD",
+      "url": "https://nicsilver.com/tune-up-kit.html",
+      "availability": "https://schema.org/InStock",
+      "hasMerchantReturnPolicy": {
+        "@type": "MerchantReturnPolicy",
+        "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+        "merchantReturnDays": 14,
+        "refundType": "https://schema.org/FullRefund"
+      }
+    }
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+
+  <style>
+    /* ============ Tune-Up Kit page system (tk-) ============
+       Site tokens are the skin (coral, Playfair, Inter, white).
+       Composition follows landing-page-craft.md: one hero move
+       (the product grades you, live), varied section grammar,
+       scale contrast, asymmetry, mono accents, motion seasoning. */
+
+    :root {
+      --tk-ink: #111111;
+      --tk-coral: #f24b2e;
+      --tk-gold: #c17817;
+      --tk-green: #3a7d44;
+      --tk-muted: #6B7280;
+      --tk-line: #E5E7EB;
+      --tk-dark: #16120f;
+      --tk-dark2: #211b16;
+      --tk-cream: #f5f1ee;
+      --tk-mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
+    }
+    .tk-eyebrow { font-family: var(--tk-mono); font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--tk-muted); display: inline-flex; align-items: center; gap: 8px; }
+    .tk-eyebrow::before { content: ""; width: 10px; height: 10px; background: var(--tk-coral); display: inline-block; }
+    .tk-reveal { opacity: 0; transform: translateY(26px); transition: opacity .7s ease, transform .7s ease; }
+    .tk-reveal.tk-in { opacity: 1; transform: none; }
+
+    /* ---------- hero ---------- */
+    .tk-hero { padding: 150px 0 0; overflow: hidden; }
+    .tk-hero-grid { display: grid; grid-template-columns: 7fr 5fr; gap: 48px; align-items: center; }
+    .tk-hero h1 { font-family: 'Playfair Display', Georgia, serif; font-weight: 900; font-size: clamp(44px, 6vw, 84px); line-height: 1.02; letter-spacing: -0.02em; margin: 18px 0 22px; }
+    .tk-hero h1 em { font-style: italic; color: var(--tk-coral); }
+    .tk-hero-sub { font-size: 19px; color: var(--tk-muted); max-width: 480px; line-height: 1.6; margin: 0 0 28px; }
+    .tk-price-row { display: flex; align-items: baseline; gap: 14px; margin-bottom: 26px; }
+    .tk-price-row b { font-family: 'Playfair Display', serif; font-size: 54px; line-height: 1; }
+    .tk-price-row span { font-family: var(--tk-mono); font-size: 13px; color: var(--tk-muted); }
+    .tk-hero-ctas { display: flex; gap: 14px; flex-wrap: wrap; }
+
+    /* Anthropic-style product fields: UI cards on rounded muted color canvases */
+    .tk-field { border-radius: 22px; padding: 34px; }
+    .tk-field.taupe { background: #e7ddd3; }
+    .tk-field.olive { background: #717c59; }
+    .tk-field.blush { background: #f3d8cf; }
+
+    /* the product, grading a workspace, live */
+    .tk-score-panel { background: var(--tk-dark); border-radius: 16px; padding: 28px 26px 22px; color: var(--tk-cream); box-shadow: 0 30px 60px -28px rgba(17,17,17,.5); position: relative; }
+    .tk-score-panel::before { content: ""; display: block; width: 52px; height: 12px; margin-bottom: 4px; background: radial-gradient(circle 6px at 6px 6px, #ff5f57 6px, transparent 7px), radial-gradient(circle 6px at 26px 6px, #febc2e 6px, transparent 7px), radial-gradient(circle 6px at 46px 6px, #28c840 6px, transparent 7px); }
+    .tk-score-panel .win-title { font-family: var(--tk-mono); font-size: 12px; color: #b8aca0; display: block; border-bottom: 1px solid #2e261f; padding-bottom: 12px; margin-bottom: 18px; margin-top: -14px; text-align: center; }
+    .tk-score-top { display: flex; gap: 22px; align-items: center; }
+    .tk-donut { position: relative; width: 116px; height: 116px; flex-shrink: 0; }
+    .tk-donut svg { transform: rotate(-90deg); }
+    .tk-donut .num { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+    .tk-donut .num b { font-family: 'Playfair Display', serif; font-size: 34px; line-height: 1; }
+    .tk-donut .num span { font-family: var(--tk-mono); font-size: 8px; letter-spacing: .12em; color: #b8aca0; }
+    .tk-pillars { flex: 1; }
+    .tk-pillar { margin-bottom: 9px; }
+    .tk-pillar .lbl { display: flex; justify-content: space-between; font-family: var(--tk-mono); font-size: 11px; letter-spacing: .08em; margin-bottom: 4px; color: #e3dad2; }
+    .tk-bar { height: 5px; background: #2e261f; border-radius: 3px; overflow: hidden; }
+    .tk-bar i { display: block; height: 100%; border-radius: 3px; width: 0; transition: width 1.4s cubic-bezier(.2,.7,.2,1); }
+    .tk-findings { margin-top: 18px; border-top: 1px solid #2e261f; padding-top: 14px; }
+    .tk-finding { display: flex; gap: 10px; align-items: center; font-family: var(--tk-mono); font-size: 12.5px; color: #e3dad2; margin-bottom: 8px; }
+    .tk-dot { width: 9px; height: 9px; border-radius: 50%; flex-shrink: 0; }
+    .tk-dot.r { background: var(--tk-coral); } .tk-dot.a { background: var(--tk-gold); } .tk-dot.g { background: var(--tk-green); }
+
+    /* ---------- marquee ---------- */
+    .tk-marquee { border-top: 1px solid var(--tk-line); border-bottom: 1px solid var(--tk-line); padding: 14px 0; margin-top: 80px; overflow: hidden; white-space: nowrap; }
+    .tk-marquee-track { display: inline-block; animation: tk-scroll 48s linear infinite; }
+    .tk-marquee span { font-family: var(--tk-mono); font-size: 12.5px; letter-spacing: .1em; text-transform: uppercase; color: #44403c; margin-right: 16px; }
+    .tk-marquee b { color: var(--tk-coral); font-weight: 400; margin-right: 16px; }
+    @keyframes tk-scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+    /* ---------- honest editorial ---------- */
+    .tk-honest { padding: 110px 0 90px; }
+    .tk-honest-grid { display: grid; grid-template-columns: 4fr 8fr; gap: 48px; }
+    .tk-honest h2 { font-family: 'Playfair Display', serif; font-weight: 700; font-size: clamp(30px, 3.4vw, 46px); line-height: 1.12; margin: 14px 0 0; }
+    .tk-honest-right p { font-size: 18px; line-height: 1.7; color: #374151; max-width: 560px; margin: 0 0 18px; }
+    .tk-honest-right p strong { color: var(--tk-ink); }
+
+    /* ---------- dark gates panel (page within page) ---------- */
+    .tk-gates-wrap { padding: 0 24px; }
+    .tk-gates { background: var(--tk-dark); border-radius: 24px; color: var(--tk-cream); max-width: 1160px; margin: 0 auto; padding: 90px 0; position: relative; overflow: hidden; }
+    .tk-gates::after { content: ""; position: absolute; inset: 0; background-image: linear-gradient(#ffffff08 1px, transparent 1px), linear-gradient(90deg, #ffffff08 1px, transparent 1px); background-size: 56px 56px; pointer-events: none; }
+    .tk-gates .container { position: relative; z-index: 1; }
+    .tk-gates .tk-eyebrow { color: #c0b4a8; }
+    .tk-gates h2 { font-family: 'Playfair Display', serif; font-size: clamp(34px, 4vw, 56px); font-weight: 700; line-height: 1.08; margin: 16px 0 10px; max-width: 640px; color: var(--tk-cream); }
+    .tk-gates h2 em { color: var(--tk-coral); font-style: italic; }
+    .tk-gates-lead { color: #e3dad2; font-size: 17px; max-width: 560px; margin-bottom: 44px; }
+    .tk-gates-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; align-items: start; }
+    .tk-terminal { background: #0c0a08; border: 1px solid #3a3128; border-radius: 12px; font-family: var(--tk-mono); font-size: 13.5px; line-height: 1.8; padding: 18px 20px; }
+    .tk-terminal .bar { display: flex; gap: 6px; margin-bottom: 16px; align-items: center; }
+    .tk-terminal .bar i { width: 11px; height: 11px; border-radius: 50%; }
+    .tk-terminal .bar .ttl { margin-left: auto; margin-right: auto; color: #9d9087; font-size: 11.5px; letter-spacing: .06em; }
+    .tk-terminal .who { color: #9d9087; font-style: italic; font-family: Inter, sans-serif; font-size: 13px; margin: 2px 0 6px; }
+    .tk-terminal .usr { color: #f24b2e; }
+    .tk-terminal .tool { color: #e8e2de; font-weight: 600; }
+    .tk-terminal .sub { padding-left: 14px; }
+    .tk-terminal .ast { color: #f24b2e; }
+    .tk-terminal .hint { color: #6f6258; font-size: 11.5px; border-top: 1px solid #2e261f; margin-top: 14px; padding-top: 10px; }
+    .tk-terminal .c { color: #9d9087; }
+    .tk-terminal .cmd { color: #e8e2de; }
+    .tk-terminal .block { color: var(--tk-coral); }
+    .tk-terminal .ok { color: #7da883; }
+    .tk-gate-list { list-style: none; padding: 0; margin: 0; }
+    .tk-gate-list li { border-top: 1px solid #2e261f; padding: 18px 0; }
+    .tk-gate-list li:last-child { border-bottom: 1px solid #2e261f; }
+    .tk-gate-list h3 { font-size: 17px; margin: 0 0 6px; color: var(--tk-cream); }
+    .tk-gate-list p { font-size: 15px; color: #cfc4ba; margin: 0; line-height: 1.65; }
+
+    /* ---------- money section ---------- */
+    .tk-money { padding: 110px 0; }
+    .tk-money-grid { display: grid; grid-template-columns: 5fr 7fr; gap: 56px; align-items: center; }
+    .tk-money h2 { font-family: 'Playfair Display', serif; font-size: clamp(30px, 3.4vw, 46px); font-weight: 700; line-height: 1.1; margin: 14px 0 16px; }
+    .tk-money p { color: #374151; font-size: 17px; line-height: 1.65; max-width: 440px; }
+    .tk-chart-card { background: #fff; border-radius: 14px; padding: 26px 28px; box-shadow: 0 24px 48px -30px rgba(17,17,17,.4); }
+    .tk-chart-card .hd { font-family: var(--tk-mono); font-size: 11px; letter-spacing: .1em; color: var(--tk-muted); display: flex; justify-content: space-between; margin-bottom: 18px; }
+    .tk-chart { display: flex; align-items: flex-end; gap: 6px; height: 130px; }
+    .tk-chart i { flex: 1; background: var(--tk-cream); border-radius: 3px 3px 0 0; min-height: 6%; }
+    .tk-chart i.hot { background: var(--tk-coral); }
+    .tk-chart-rows { margin-top: 18px; border-top: 1px solid var(--tk-line); padding-top: 14px; font-family: var(--tk-mono); font-size: 12px; color: #374151; }
+    .tk-chart-rows div { display: flex; justify-content: space-between; padding: 5px 0; }
+    .tk-bignums { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; margin-top: 90px; }
+    .tk-bignum b { font-family: 'Playfair Display', serif; font-size: clamp(54px, 7vw, 96px); line-height: 1; display: block; letter-spacing: -0.02em; }
+    .tk-bignum b sup { font-size: .45em; color: var(--tk-coral); }
+    .tk-bignum span { display: block; margin-top: 10px; color: var(--tk-muted); font-size: 15px; max-width: 260px; line-height: 1.5; }
+
+    /* ---------- twelve components, four jobs ---------- */
+    .tk-jobs { padding: 30px 0 110px; }
+    .tk-job { border-top: 1px solid var(--tk-line); padding: 44px 0; display: grid; grid-template-columns: 110px 4fr 6fr; gap: 28px; align-items: baseline; }
+    .tk-job:last-of-type { border-bottom: 1px solid var(--tk-line); }
+    .tk-job .no { font-family: 'Playfair Display', serif; font-size: 60px; font-weight: 700; color: var(--tk-line); line-height: 1; transition: color .4s; }
+    .tk-job:hover .no { color: var(--tk-coral); }
+    .tk-job h3 { font-family: 'Playfair Display', serif; font-size: 27px; margin: 0; }
+    .tk-job ul { list-style: none; padding: 0; margin: 0; }
+    .tk-job li { padding: 6px 0 6px 22px; position: relative; color: #374151; font-size: 15.5px; }
+    .tk-job li::before { content: ""; position: absolute; left: 0; top: 13px; width: 10px; height: 2px; background: var(--tk-coral); }
+
+    /* ---------- steps ---------- */
+    .tk-steps { background: var(--tk-cream); padding: 100px 0; }
+    .tk-steps h2 { font-family: 'Playfair Display', serif; font-size: clamp(30px, 3.4vw, 46px); margin: 14px 0 40px; }
+    .tk-steps-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; border-left: 1px solid #ddd2c8; }
+    .tk-step { border-right: 1px solid #ddd2c8; padding: 6px 26px 0; }
+    .tk-step b { font-family: var(--tk-mono); font-size: 12px; color: var(--tk-coral); letter-spacing: .12em; display: block; margin-bottom: 12px; }
+    .tk-step h3 { font-size: 17px; margin: 0 0 8px; }
+    .tk-step p { font-size: 14px; color: var(--tk-muted); line-height: 1.6; margin: 0; }
+
+    /* ---------- buy ---------- */
+    .tk-buy { padding: 110px 0; }
+    .tk-buy-grid { display: grid; grid-template-columns: 6fr 6fr; gap: 60px; align-items: start; }
+    .tk-buy h2 { font-family: 'Playfair Display', serif; font-size: clamp(34px, 4vw, 54px); line-height: 1.06; margin: 14px 0 18px; }
+    .tk-buy h2 em { font-style: italic; color: var(--tk-coral); }
+    .tk-buy-left p { color: #374151; font-size: 17px; max-width: 440px; line-height: 1.65; }
+    .tk-guarantee { border-left: 3px solid var(--tk-coral); padding: 4px 0 4px 18px; margin-top: 26px; max-width: 440px; }
+    .tk-guarantee b { display: block; margin-bottom: 4px; }
+    .tk-guarantee p { font-size: 15px; color: var(--tk-muted); margin: 0; }
+    .tk-buy-card { background: var(--tk-dark); color: var(--tk-cream); border-radius: 18px; padding: 36px 36px 30px; position: relative; }
+    .tk-buy-card .tag { font-family: var(--tk-mono); font-size: 12px; letter-spacing: .12em; color: #c0b4a8; text-transform: uppercase; }
+    .tk-buy-card .price { display: flex; align-items: baseline; gap: 12px; margin: 10px 0 20px; }
+    .tk-buy-card .price b { font-family: 'Playfair Display', serif; font-size: 58px; line-height: 1; }
+    .tk-buy-card .price span { font-family: var(--tk-mono); font-size: 12.5px; color: #c0b4a8; }
+    .tk-buy-card ul { list-style: none; padding: 0; margin: 0 0 24px; columns: 2; gap: 22px; }
+    .tk-buy-card li { font-size: 13.5px; color: #e3dad2; padding: 4px 0 4px 18px; position: relative; break-inside: avoid; }
+    .tk-buy-card li::before { content: ""; position: absolute; left: 0; top: 11px; width: 8px; height: 8px; border-radius: 50%; background: var(--tk-green); }
+    .tk-checkout-slot .btn { width: 100%; justify-content: center; font-size: 17px; padding: 16px; }
+    .tk-founding { background: #221b15; border: 1px solid #3a3128; border-radius: 10px; padding: 16px 18px; margin-bottom: 22px; }
+    .tk-founding b { display: block; font-family: var(--tk-mono); font-size: 11.5px; letter-spacing: .1em; color: var(--tk-gold); text-transform: uppercase; margin-bottom: 6px; }
+    .tk-founding p { margin: 0; font-size: 14px; color: #e3dad2; line-height: 1.6; }
+    .tk-buy-card .fine { font-family: var(--tk-mono); font-size: 12px; color: #b8aca0; margin-top: 14px; text-align: center; }
+
+    /* ---------- why this one ---------- */
+    .tk-why { background: var(--tk-cream); padding: 100px 0; }
+    .tk-why h2 { font-family: 'Playfair Display', serif; font-size: clamp(30px, 3.4vw, 46px); margin: 14px 0 36px; max-width: 620px; line-height: 1.1; }
+    .tk-why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border: 1px solid #ddd2c8; border-radius: 16px; overflow: hidden; background: #fff; }
+    .tk-why-cell { padding: 30px 32px; border-right: 1px solid #eee5de; border-bottom: 1px solid #eee5de; }
+    .tk-why-cell h3 { font-size: 18px; margin: 0 0 8px; display: flex; gap: 10px; align-items: baseline; }
+    .tk-why-cell h3 i { font-style: normal; color: var(--tk-coral); font-family: var(--tk-mono); font-size: 13px; }
+    .tk-why-cell p { margin: 0; color: #57534e; font-size: 15px; line-height: 1.65; }
+
+    /* ---------- from the creator ---------- */
+    .tk-nic { padding: 110px 0; }
+    .tk-nic-grid { display: grid; grid-template-columns: 5fr 7fr; gap: 56px; align-items: center; }
+    .tk-nic-photo { border-radius: 22px; background: #e7ddd3; padding: 26px; }
+    .tk-nic-photo img { width: 100%; border-radius: 14px; display: block; box-shadow: 0 24px 48px -30px rgba(17,17,17,.4); }
+    .tk-nic-photo figcaption { font-family: var(--tk-mono); font-size: 12px; color: #6B7280; margin-top: 14px; text-align: center; }
+    .tk-nic h2 { font-family: 'Playfair Display', serif; font-size: clamp(30px, 3.4vw, 46px); line-height: 1.1; margin: 14px 0 18px; }
+    .tk-nic p { color: #374151; font-size: 17px; line-height: 1.7; max-width: 520px; margin: 0 0 16px; }
+    .tk-nic .sig { font-family: 'Playfair Display', serif; font-style: italic; font-size: 22px; margin-top: 8px; }
+    @media (max-width: 920px) { .tk-why-grid, .tk-nic-grid { grid-template-columns: 1fr; } .tk-why-cell { border-right: 0; } }
+
+    .tk-midcta { text-align: center; padding: 34px 0 0; }
+    .tk-midcta a { font-family: var(--tk-mono); font-size: 14px; color: var(--tk-coral); text-decoration: none; border-bottom: 2px solid var(--tk-coral); padding-bottom: 3px; }
+    .tk-tree { background: #fff; border: 1px solid var(--tk-line); border-radius: 10px; padding: 18px 22px; font-family: var(--tk-mono); font-size: 12.5px; line-height: 1.7; color: #374151; margin-top: 26px; overflow-x: auto; }
+    .tk-tree b { color: var(--tk-ink); font-weight: 600; }
+    .tk-tree .cm { color: var(--tk-muted); }
+    /* ---------- faq + cross-sell ---------- */
+    .tk-faq { padding: 0 0 100px; }
+    .tk-faq h2 { font-family: 'Playfair Display', serif; font-size: clamp(28px, 3vw, 40px); margin: 14px 0 26px; }
+    .tk-faq-item { border-top: 1px solid var(--tk-line); padding: 22px 0; display: grid; grid-template-columns: 5fr 7fr; gap: 30px; max-width: 980px; }
+    .tk-faq-item:last-child { border-bottom: 1px solid var(--tk-line); }
+    .tk-faq-item h3 { font-size: 17px; margin: 0; }
+    .tk-faq-item p { margin: 0; color: var(--tk-muted); font-size: 15px; line-height: 1.65; }
+    .tk-audit { background: var(--tk-cream); padding: 90px 0; text-align: center; }
+    .tk-audit h2 { font-family: 'Playfair Display', serif; font-size: clamp(30px, 3.6vw, 48px); max-width: 700px; margin: 14px auto 14px; line-height: 1.12; }
+    .tk-audit p { color: #57534e; max-width: 560px; margin: 0 auto 28px; font-size: 17px; line-height: 1.65; }
+
+    @media (max-width: 920px) {
+      .tk-hero-grid, .tk-honest-grid, .tk-gates-grid, .tk-money-grid, .tk-buy-grid { grid-template-columns: 1fr; }
+      .tk-steps-grid { grid-template-columns: 1fr 1fr; border-left: 0; }
+      .tk-step { padding: 20px 0; border-right: 0; }
+      .tk-job { grid-template-columns: 60px 1fr; }
+      .tk-job ul { grid-column: 2; }
+      .tk-bignums { grid-template-columns: 1fr; gap: 28px; }
+      .tk-buy-card ul { columns: 1; }
+      .tk-score-panel { transform: none; }
+      .tk-faq-item { grid-template-columns: 1fr; gap: 8px; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <header class="site-header" id="site-header">
+    <nav class="nav-container" aria-label="Main navigation">
+      <a href="/" class="nav-logo"><img src="https://res.cloudinary.com/drdkvqdzd/image/upload/v1772094064/silver_logo_transparent_vrvadv.png" alt="Silver AI Consulting" class="nav-logo-img"></a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#gates">The gates</a></li>
+        <li><a href="#money">The money</a></li>
+        <li><a href="#faq">Questions</a></li>
+        <li><a href="/">Main site</a></li>
+      </ul>
+      <a href="#buy" class="btn btn-primary nav-cta" data-cta="nav-kit">Get the kit</a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span><span class="nav-toggle-bar"></span>
+      </button>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- HERO: the product grades you, live -->
+    <section class="tk-hero" id="hero">
+      <div class="container">
+        <div class="tk-hero-grid">
+          <div>
+            <span class="tk-eyebrow">Claude Code &middot; Cowork &middot; Codex</span>
+            <h1>Your AI deleted the client folder in <em>0.3 seconds</em>.</h1>
+            <p class="tk-hero-sub">It works fast. So do its mistakes. The Tune-Up Kit installs gates that stop them, approval on everything it sends, and a dashboard on everything it spends.</p>
+            <p style="font-family:var(--tk-mono); font-size:13px; color:var(--tk-muted); margin:0 0 26px; letter-spacing:.04em;">installed in 30 minutes &middot; 14-day money-back guarantee</p>
+            <div class="tk-hero-ctas">
+              <a href="#buy" class="btn btn-primary" data-cta="hero-kit">Get the Tune-Up Kit</a>
+              <a href="#gates" class="btn btn-secondary">Watch it block a delete</a>
+            </div>
+          </div>
+          <div class="tk-field taupe"><div class="tk-score-panel" id="score-panel">
+            <span class="win-title">my workspace, scored &middot; real numbers</span>
+            <div class="tk-score-top">
+              <div class="tk-donut">
+                <svg viewBox="0 0 116 116" width="116" height="116">
+                  <circle cx="58" cy="58" r="50" fill="none" stroke="#2e261f" stroke-width="10"/>
+                  <circle id="donut-arc" cx="58" cy="58" r="50" fill="none" stroke="#c17817" stroke-width="10" stroke-linecap="round" stroke-dasharray="0 314.2"/>
+                </svg>
+                <div class="num"><b id="score-num">0</b><span>OUT OF 100</span></div>
+              </div>
+              <div class="tk-pillars">
+                <div class="tk-pillar"><div class="lbl"><span>SECURITY</span><span>19/25</span></div><div class="tk-bar"><i data-w="76%" style="background:#c17817"></i></div></div>
+                <div class="tk-pillar"><div class="lbl"><span>SPEND</span><span>10/25</span></div><div class="tk-bar"><i data-w="40%" style="background:#f24b2e"></i></div></div>
+                <div class="tk-pillar"><div class="lbl"><span>RESILIENCE</span><span>25/25</span></div><div class="tk-bar"><i data-w="100%" style="background:#3a7d44"></i></div></div>
+                <div class="tk-pillar"><div class="lbl"><span>HYGIENE</span><span>11/25</span></div><div class="tk-bar"><i data-w="44%" style="background:#f24b2e"></i></div></div>
+              </div>
+            </div>
+            <div class="tk-findings">
+              <div class="tk-finding"><span class="tk-dot r"></span>no hard stop on destructive commands</div>
+              <div class="tk-finding"><span class="tk-dot r"></span>29 skills run on the most expensive model</div>
+              <div class="tk-finding"><span class="tk-dot a"></span>2 plug-ins auto-update unchecked</div>
+              <div class="tk-finding"><span class="tk-dot g"></span>password file stays out of git</div>
+            </div>
+          </div></div>
+        </div>
+      </div>
+      <div class="tk-marquee" aria-hidden="true">
+        <div class="tk-marquee-track" id="marquee-track">
+          <span>no more deleted folders</span><b>///</b><span>a human reads every send</span><b>///</b><span>see what every task costs</span><b>///</b><span>cheap models for cheap work</span><b>///</b><span>downloads scanned before they run</span><b>///</b><span>hidden instructions blocked</span><b>///</b><span>works with claude code and codex</span><b>///</b><span>installed in 30 minutes</span><b>///</b>
+        </div>
+      </div>
+    </section>
+
+    <!-- THE HONEST PART -->
+    <section class="tk-honest">
+      <div class="container">
+        <div class="tk-honest-grid">
+          <div class="tk-reveal">
+            <span class="tk-eyebrow">The honest part</span>
+            <h2>I run my whole business on Claude Code. So I'll say it plainly.</h2>
+          </div>
+          <div class="tk-honest-right">
+            <p class="tk-reveal"><strong>A written rule is a polite request.</strong> The AI can talk itself past it on a confused day. A gate is different: a check that fires before the command runs, outside the AI's reach. It's the only thing that actually stops a deleted folder, overwritten work, or a very strange email to a real customer.</p>
+            <p class="tk-reveal"><strong>Every skill you install runs as you.</strong> Your permissions, your files, your accounts. Most people have no step between "found it on GitHub" and "running it".</p>
+            <p class="tk-reveal"><strong>The bill grows while you're not looking.</strong> Most setups quietly pay top-model prices for grunt work like renaming files. In my workspace that was the single biggest leak, and closing it took one config file.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DARK GATES PANEL -->
+    <div class="tk-gates-wrap" id="gates">
+      <section class="tk-gates">
+        <div class="container">
+          <span class="tk-eyebrow">Hard stops &middot; live</span>
+          <h2>A rule the AI <em>cannot</em> talk itself past.</h2>
+          <p class="tk-gates-lead">This is the guardrail hook doing its job in my workspace. It fires before the command runs, and no amount of clever reasoning on the AI's side gets around it.</p>
+          <div class="tk-gates-grid">
+            <div class="tk-field olive tk-reveal" style="padding:26px"><div class="tk-terminal" aria-label="A Claude Code session where the guardrail blocks a destructive command">
+              <div class="bar"><i style="background:#ff5f57"></i><i style="background:#febc2e"></i><i style="background:#28c840"></i><span class="ttl">Claude Code</span></div>
+              <div class="who">You ask your AI assistant:</div>
+              <div><span class="usr">&gt;</span> <span class="cmd">tidy up the old client folders</span></div>
+              <div>&nbsp;</div>
+              <div><span class="tool">&#9210; Bash</span><span class="c">(rm -rf clients/archive/)</span></div>
+              <div class="sub"><span class="block">&#9095; BLOCKED by guardrail hook</span></div>
+              <div class="sub"><span class="block">&nbsp;&nbsp;protected folder: clients/</span></div>
+              <div>&nbsp;</div>
+              <div><span class="ast">&#10035;</span> That folder is protected, so I can't delete it. I'll list what's inside so you can review it first.</div>
+              <div>&nbsp;</div>
+              <div class="who">Later, it tries to send an email:</div>
+              <div><span class="tool">&#9210; Bash</span><span class="c">(python3 send_campaign.py)</span></div>
+              <div class="sub"><span class="block">&#9095; BLOCKED: needs your approval first</span></div>
+              <div class="sub"><span class="ok">&nbsp;&nbsp;you read it, type APPROVE EMAIL, it sends. once.</span></div>
+              <div class="hint">esc to interrupt &middot; the gate fires before the command runs</div>
+            </div></div>
+            <ul class="tk-gate-list">
+              <li class="tk-reveal"><h3>Guardrail hook</h3><p>A hard stop on the worst commands: wiping folders, overwriting saved work, deleting databases, touching folders you marked as protected. It blocks the command before it runs, and the AI cannot argue with it.</p></li>
+              <li class="tk-reveal"><h3>Send gate</h3><p>Emails, posts, and payments need a human to read the full message and type APPROVE before anything goes out. The approval writes a single-use token bound to a fingerprint of that exact message (sha-256), expiring in 5 minutes. Change one word and the fingerprint no longer matches, so it needs approving again.</p></li>
+              <li class="tk-reveal"><h3>Skill quarantine</h3><p>Add-ons you download get scanned for hidden instructions and key-stealing code before they ever run. "Found it online" stops going straight to "running with full access to my files".</p></li>
+              <li class="tk-reveal"><h3>Security nudge</h3><p>If the AI writes risky code, like leaving a password sitting in a file, it gets flagged the moment it happens, not weeks later.</p></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="tk-midcta"><a href="#buy">I want these gates installed &#8594;</a></div>
+
+    <!-- THE MONEY -->
+    <section class="tk-money" id="money">
+      <div class="container">
+        <div class="tk-money-grid">
+          <div class="tk-reveal">
+            <span class="tk-eyebrow">See the money</span>
+            <h2>One of my skills burned $552 in four sessions. I'd never have known.</h2>
+            <p>The spend dashboard reads your local session logs and shows where the money actually goes: per day, per model, per project, per skill, and how much the cache saved you. I run it on my own logs every month; the card here shows real numbers from mine.</p>
+            <p>On a flat subscription it shows what your plan actually does for you, and which skills eat it. Re-run it monthly; the trend is the point.</p>
+          </div>
+          <div class="tk-field blush tk-reveal"><div class="tk-chart-card" aria-label="Spend dashboard preview">
+            <div class="hd"><span>SPEND / LAST 30 DAYS</span><span>CACHE HIT 97%</span></div>
+            <div class="tk-chart" id="tk-chart"></div>
+            <div class="tk-chart-rows">
+              <div><span>top model</span><span>72% of spend</span></div>
+              <div><span>top skill burner</span><span>$552 / 4 sessions</span></div>
+              <div><span>flag</span><span style="color:var(--tk-coral)">spend trending up</span></div>
+            </div>
+          </div></div>
+        </div>
+        <div class="tk-bignums">
+          <div class="tk-bignum tk-reveal"><b>85<sup>%</sup></b><span>token cut on one of my daily pipelines using the chaining pattern in this kit</span></div>
+          <div class="tk-bignum tk-reveal"><b>72<sup>%</sup></b><span>drop in my always-loaded memory size after the instruction-file trim</span></div>
+          <div class="tk-bignum tk-reveal"><b>0</b><span>API keys needed. Plain Python, runs on your machine, sends nothing anywhere</span></div>
+        </div>
+        <p style="font-family:var(--tk-mono); font-size:12.5px; color:var(--tk-muted); margin-top:18px;">both numbers measured on my own session logs; the dashboard in this kit is how I caught them</p>
+      </div>
+    </section>
+
+    <!-- WHY THIS ONE -->
+    <section class="tk-why">
+      <div class="container">
+        <span class="tk-eyebrow">Why this one</span>
+        <h2>Everyone sells courses about AI. I'm selling the gates I actually run.</h2>
+        <div class="tk-why-grid tk-reveal">
+          <div class="tk-why-cell"><h3><i>01</i> Working tools, day one</h3><p>The usual offer is a video course or a community. This is working code: hooks, gates, and a dashboard you install once and keep.</p></div>
+          <div class="tk-why-cell"><h3><i>02</i> Running in my business right now</h3><p>Every component protects my own client work and my own money as you read this. What you download is my setup, with my paths stripped out.</p></div>
+          <div class="tk-why-cell"><h3><i>03</i> Nothing phones home</h3><p>Most "AI tools" want your API keys and your data. This kit makes zero network calls, so there is nothing to leak. For a security product, that's the only honest design.</p></div>
+          <div class="tk-why-cell"><h3><i>04</i> A backup vendor, built in</h3><p>I haven't found another kit that ships this: if your AI vendor has an outage or hikes prices, the cross-agent layer means a second one picks up the same workspace. Your business doesn't wait out somebody else's bad day.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STEPS -->
+    <section class="tk-steps">
+      <div class="container">
+        <span class="tk-eyebrow">How it works</span>
+        <h2>Buy it, unzip it, follow eight steps.</h2>
+        <div class="tk-steps-grid">
+          <div class="tk-step tk-reveal"><b>MINUTE 1</b><h3>Download lands in your inbox</h3><p>Checkout below; the zip and the setup guide arrive a minute later.</p></div>
+          <div class="tk-step tk-reveal"><b>MINUTE 5</b><h3>The guardrail is live</h3><p>Step one installs the hard stop. From here your AI cannot wipe a folder, even on its worst day.</p></div>
+          <div class="tk-step tk-reveal"><b>MINUTE 30</b><h3>All gates installed</h3><p>Eight steps, ordered by payoff, each with a "check it worked" test. Copy a file, paste a snippet: that's the skill level needed. Per-harness notes cover Claude Code, Cowork, and Codex.</p></div>
+          <div class="tk-step tk-reveal"><b>MONTHLY</b><h3>Re-run the dashboard</h3><p>Watch the spend trend and catch the next leak early. If you get stuck, reply to the delivery email and I answer.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FROM THE CREATOR -->
+    <section class="tk-nic">
+      <div class="container">
+        <div class="tk-nic-grid">
+          <figure class="tk-nic-photo tk-reveal" style="margin:0">
+            <img src="https://res.cloudinary.com/drdkvqdzd/image/upload/v1769443235/2025-11-25_18.12.18_2_ciikbf.jpg" alt="Nic Silver, founder of Silver AI Consulting" width="480" height="480" loading="lazy">
+            <figcaption>Nic Silver &middot; Silver AI Consulting &middot; Trondheim, Norway</figcaption>
+          </figure>
+          <div class="tk-reveal">
+            <span class="tk-eyebrow">From the creator</span>
+            <h2>Every gate in here exists because my workspace needed it first.</h2>
+            <p>I'm a scientist by training, 15 years in research labs, and for the last three years I've built AI systems for businesses. My whole consultancy runs on Claude Code: my client work, my outreach, my money. And with that much access, hoping the AI behaves stopped feeling like a plan. So I built gates.</p>
+            <p>This kit is those gates. The actual hooks and patterns protecting my own business, cleaned up so they install in yours. And if a step confuses you, you reply to the delivery email and you get me, not a help desk.</p>
+            <p class="sig">Cheers, Nic</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BUY -->
+    <section class="tk-buy" id="buy">
+      <div class="container">
+        <div class="tk-buy-grid">
+          <div class="tk-buy-left tk-reveal">
+            <span class="tk-eyebrow">Get the kit</span>
+            <h2>Thirty minutes from now, your AI can't wipe a folder or send an email <em>without you</em>.</h2>
+            <p>Everything in the kit runs in my own production workspace today. Same gates, same patterns, decoupled and documented so they install anywhere.</p>
+            <div class="tk-guarantee">
+              <b>14-day money-back guarantee</b>
+              <p>Try it for two weeks. Not happy for any reason, reply to your receipt and you get every cent back. No forms, no questions.</p>
+            </div>
+            <pre class="tk-tree tk-reveal">tune-up-kit/
+&#9500;&#9472; <b>SETUP.md</b>               <span class="cm">the 30-minute guide</span>
+&#9500;&#9472; settings-snippet.json
+&#9500;&#9472; hooks/
+&#9474;  &#9500;&#9472; <b>guardrail_check.py</b>  <span class="cm">the hard stop</span>
+&#9474;  &#9500;&#9472; security_check.py    <span class="cm">risky-code nudge</span>
+&#9474;  &#9492;&#9472; skill_md_validate.py
+&#9500;&#9472; lib/
+&#9474;  &#9500;&#9472; <b>send_gate.py</b>        <span class="cm">approval tokens</span>
+&#9474;  &#9500;&#9472; validate_skill.py
+&#9474;  &#9492;&#9472; check_agents_sync.py
+&#9500;&#9472; scripts/
+&#9474;  &#9492;&#9472; <b>spend_dashboard.py</b>
+&#9500;&#9472; args/model-routing.yaml
+&#9500;&#9472; docs/                  <span class="cm">5 pattern guides</span>
+&#9492;&#9472; skill-vet/             <span class="cm">quarantine gate + self-test</span></pre>
+            <p style="font-size:13px; color:var(--tk-muted); margin-top:10px;">The actual zip contents. Seven working scripts, one config, five guides, plus the skill-vet suite.</p>
+          </div>
+          <div class="tk-buy-card tk-reveal">
+            <span class="tag">Workspace Tune-Up Kit &middot; v1.0</span>
+            <div class="price"><b>$199</b><span>one-time<br>every version-1 update included, free</span></div>
+            <ul>
+              <li>Guardrail hook</li>
+              <li>Security nudge hook</li>
+              <li>Send gate</li>
+              <li>Skill quarantine gate</li>
+              <li>Automatic skill checker</li>
+              <li>Spend dashboard</li>
+              <li>Cheap-model routing config</li>
+              <li>Instruction-file slim-down guide</li>
+              <li>Lazy loading guide</li>
+              <li>Token-saving chaining pattern</li>
+              <li>Hidden-instruction defense</li>
+              <li>Backup-vendor layer + setup guide</li>
+            </ul>
+            <div class="tk-founding">
+              <b>Founding buyer bonus &middot; v1.0</b>
+              <p>This kit is new, so early buyers get me with it. After you install, send me your health-check score and I'll personally reply with what I'd fix first in your workspace, in order of payoff. Normally the only way to get my eyes on your specific setup is the $2,000 audit. This is a launch offer, and it won't be around long.</p>
+            </div>
+            <div class="tk-checkout-slot" id="checkout-slot">
+              <!-- THRIVECART EMBED GOES HERE once the product exists. -->
+              <a href="#" class="btn btn-primary" data-cta="buy-kit" aria-disabled="true">Checkout opens at launch</a>
+            </div>
+            <p class="fine">no accounts &middot; no api keys &middot; nothing leaves your machine</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="tk-faq" id="faq">
+      <div class="container">
+        <span class="tk-eyebrow">Questions</span>
+        <h2>The things people ask before buying.</h2>
+        <div class="tk-faq-item tk-reveal"><h3>I just use Claude in a browser tab. Is this for me?</h3><p>Not yet. The kit is for AI that lives on your computer and can touch your files: Claude Code, Claude Cowork, or Codex. If your Claude lives at claude.ai in the browser, it can't delete your folders, so you don't need gates. The day you move to one of the desktop tools, come back.</p></div>
+        <div class="tk-faq-item tk-reveal"><h3>Does it work with Cowork and Codex, or just Claude Code?</h3><p>Claude Code gets everything, including the hooks. Codex gets the scripts, the patterns, and the cross-agent layer (that layer is the whole point: two vendors, one workspace). Cowork gets the scanner, the dashboard, and the patterns; hooks are a Claude Code feature. The setup guide marks each component, so nothing surprises you.</p></div>
+        <div class="tk-faq-item tk-reveal"><h3>Do I need API keys or new accounts?</h3><p>No. Nothing in the kit makes a network call. It reads your setup, gates your tools, and renders local reports, all on your machine.</p></div>
+        <div class="tk-faq-item tk-reveal"><h3>How technical do I need to be?</h3><p>If you can copy files into a folder and paste a snippet into one settings file, you're covered. Every step in the guide has a "check it worked" test.</p></div>
+        <div class="tk-faq-item tk-reveal"><h3>Is this a course?</h3><p>No. It's working tools plus short pattern guides. You install gates, not watch videos.</p></div>
+        <div class="tk-faq-item tk-reveal"><h3>What does the guarantee cover?</h3><p>Everything, for any reason, for 14 days. Reply to your receipt, money back, done.</p></div>
+      </div>
+    </section>
+
+    <!-- AUDIT CROSS-SELL -->
+    <section class="tk-audit">
+      <div class="container">
+        <span class="tk-eyebrow">Rather have it done for you?</span>
+        <h2>That's exactly what the audit is.</h2>
+        <p>The kit is the self-serve version of what I do for clients. The audit is the done-for-you version: in 2 weeks I identify your number-one manual bottleneck and ship a working AI agent against your real stack. If I don't deliver both, full refund.</p>
+        <a href="https://tidycal.com/nicsilver/intro-call" class="btn btn-primary" data-cta="kit-audit">Book an introductory call</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer" id="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col footer-copyright">
+          <p>&copy; Silver AI Consulting 2026</p>
+        </div>
+        <div class="footer-col footer-links">
+          <a href="https://www.linkedin.com/in/thenicsilver/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+          <span class="footer-divider">|</span>
+          <a href="https://x.com/thenicsilver" aria-label="X" target="_blank" rel="noopener noreferrer"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+          <span class="footer-divider">|</span>
+          <a href="mailto:contact@nicsilver.com" aria-label="Email"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <script>
+    // Page-scoped motion. Plain IntersectionObserver, no library dependency.
+    document.addEventListener("DOMContentLoaded", function () {
+      // duplicate the marquee track so the loop never shows a gap
+      var track = document.getElementById("marquee-track");
+      if (track) track.innerHTML += track.innerHTML;
+
+      // scroll reveals
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) { e.target.classList.add("tk-in"); io.unobserve(e.target); }
+        });
+      }, { threshold: 0.15 });
+      document.querySelectorAll(".tk-reveal").forEach(function (el) { io.observe(el); });
+
+      // hero scorecard: count the score up and fill the bars once visible
+      var panel = document.getElementById("score-panel");
+      if (panel) {
+        var done = false;
+        var pio = new IntersectionObserver(function (entries) {
+          if (!entries[0].isIntersecting || done) return;
+          done = true;
+          var num = document.getElementById("score-num");
+          var arc = document.getElementById("donut-arc");
+          var target = 65, circumference = 314.2, start = null;
+          function tick(ts) {
+            if (!start) start = ts;
+            var p = Math.min((ts - start) / 1400, 1);
+            var eased = 1 - Math.pow(1 - p, 3);
+            num.textContent = Math.round(target * eased);
+            arc.setAttribute("stroke-dasharray", (circumference * target / 100 * eased) + " " + circumference);
+            if (p < 1) requestAnimationFrame(tick);
+          }
+          requestAnimationFrame(tick);
+          panel.querySelectorAll(".tk-bar i").forEach(function (bar) {
+            setTimeout(function () { bar.style.width = bar.dataset.w; }, 250);
+          });
+          pio.disconnect();
+        }, { threshold: 0.3 });
+        pio.observe(panel);
+      }
+
+      // spend chart bars (deterministic shape, coral on the heavy days)
+      var chart = document.getElementById("tk-chart");
+      if (chart) {
+        var heights = [22, 30, 18, 44, 38, 12, 8, 52, 61, 40, 35, 28, 70, 55, 33, 26, 48, 84, 64, 42, 30, 58, 96, 74, 50, 38, 62, 80, 88, 100];
+        heights.forEach(function (h) {
+          var bar = document.createElement("i");
+          bar.style.height = h + "%";
+          if (h >= 70) bar.className = "hot";
+          chart.appendChild(bar);
+        });
+      }
+    });
+  </script>
+</body>
+</html>
