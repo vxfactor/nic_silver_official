@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>if (location.search.indexOf('embed=1') > -1) { document.documentElement.className += ' embed'; }</script>
   <title>Carly tripled her revenue in 5 months | Silver AI Consulting</title>
   <meta name="description" content="How a founder-led marketing agency went from chaotic, do-it-all-by-hand operations to 3x revenue in 5 months. Same team, same hours.">
   <link rel="canonical" href="https://nicsilver.com/case-studies/carly-c2-infinite.html">
@@ -265,6 +266,15 @@
       .case-results { grid-template-columns: 1fr; }
       .case-quote { flex-direction: column; }
     }
+
+    /* Embedded (lightbox) mode: hide site chrome, show just the article */
+    html.embed .site-header,
+    html.embed .site-footer,
+    html.embed .post-back,
+    html.embed .sai-widget-launcher,
+    html.embed .sai-widget-panel { display: none !important; }
+    html.embed, html.embed body { background: var(--bg-white); }
+    html.embed .blog-post { padding-top: 2rem; background: var(--bg-white); }
   </style>
 </head>
 <body>
@@ -300,7 +310,7 @@
 
       <p class="post-meta">Case study &middot; Marketing agency</p>
       <h1 class="post-title">Carly tripled her revenue in 5 months</h1>
-      <p class="post-preheader">Her number-one bottleneck was that every piece of work ran through her by hand. We removed it. 3x revenue in 5 months, same team, same hours. Here is what actually happened.</p>
+      <p class="post-preheader">She did not need more people or more tools. She needed one system that tied the whole business together. Same team, five months, 3x revenue.</p>
 
       <div class="case-results">
         <div class="case-result">
@@ -318,22 +328,15 @@
       </div>
 
       <div class="post-body">
-        <h2>The before</h2>
-        <p>Carly Craver runs C2 Infinite Marketing, a founder-led agency. When we started, her operations were chaotic in the way most growing agencies are chaotic. Three things ate her week:</p>
-        <ul>
-          <li>Content operations ran through her by hand. Writing, scheduling, adapting client content across platforms. Every piece needed her.</li>
-          <li>Organising subcontractors was manual. Chasing, briefing, coordinating.</li>
-          <li>There was no solid system underneath any of it. Just Carly holding it together.</li>
-        </ul>
-        <p>The bottleneck was never the quality of her work. It was that everything had to go through her. She could not take on more clients without cloning herself.</p>
+        <h2>Where it was stuck</h2>
+        <p>Carly Craver runs C2 Infinite Marketing, a marketing team delivering for a growing supplement brand. The work was good and demand was climbing, but she could not scale it. Nothing was written down, every handoff needed her, and most of how things ran lived in her head. She had tried AI, but bolted it onto the mess, so it became one more tool to manage.</p>
+        <p>The jam was simple: the business ran on her. Context, decisions, and quality checks all routed through one person, so everything downstream waited on her time.</p>
 
         <h2>What I built</h2>
-        <p>A content creation and distribution system wired into her actual stack: Airtable as the data layer, Make.com for the automations, Claude for writing and repurposing, Buffer for posting. A brand voice layer made the output sound like her clients, not like generic AI.</p>
-        <p>The system generated posts, repurposed long-form material, and scheduled content without Carly in the loop for every piece. The chaos got replaced by a system that runs the same way every week.</p>
+        <p>So we did not start with software. I audited how the business really ran, set the goals with her, then built one system to run her team, clients, and operations in a single place. Not a new pile of apps: we tied the existing processes, tools, and people together, then trained AI on her business, her voice, and the way she works. AI went from an add-on to the system that holds everything together.</p>
 
         <h2>What changed</h2>
-        <p>Her income tripled in five months. Not magic. Capacity.</p>
-        <p>When content operations stopped running through her manually, she could take on more clients without adding headcount or hours. Same team, same working week. The revenue followed the capacity.</p>
+        <p>With the system carrying the routine load, capacity opened up. The team took on more work without more people: more output from the team she already paid for. Same team, revenue up 3x in five months.</p>
 
         <aside class="case-quote">
           <img src="https://res.cloudinary.com/drdkvqdzd/image/upload/v1771324167/carly_cjgeit.jpg" alt="Portrait of Carly Craver" width="64" height="64" loading="lazy">
@@ -344,14 +347,20 @@
           </div>
         </aside>
 
-        <h2>The honest part</h2>
-        <p>This was the build that taught me my methodology. Back then I went straight to building. It worked, but I learned the expensive way that the hard part is not the build. It is knowing exactly which bottleneck to point it at.</p>
-        <p>That is why every client engagement now starts with an audit. Find the number-one bottleneck first, then build. Carly's project is the reason that step exists.</p>
+        <h2>Why it worked</h2>
+        <p>The win was not a clever tool. It was removing the friction that capped her. When context lives in a system instead of one person's head, work stops waiting on that person, and the reclaimed time turns into more work taken on, or more margin on the work you already do.</p>
+        <p>What moved the needle:</p>
+        <ul>
+          <li>One system, not more tools.</li>
+          <li>Clear goals before any build.</li>
+          <li>AI trained on her actual business, not generic prompts.</li>
+          <li>The bottleneck fixed first, so flow opened downstream.</li>
+        </ul>
       </div>
 
       <aside class="post-cta">
-        <p class="post-cta-headline">Want your biggest bottleneck gone in 2 weeks?</p>
-        <p class="post-cta-sub">In 2 weeks I identify your number-one manual bottleneck and ship a working AI agent that runs against your real stack. If I don't deliver both, full refund.</p>
+        <p class="post-cta-headline">Want to find the one bottleneck capping your business?</p>
+        <p class="post-cta-sub">Book a short intro call and we find where your business is actually jammed. The AI Audit is $2,000 flat: in 2 weeks I identify your number-one manual bottleneck and ship a working AI agent against your real stack. If I do not deliver both, full refund.</p>
         <a class="btn btn-primary" href="https://tidycal.com/nicsilver/intro-call" data-cta="case-study-carly">Book a free call</a>
       </aside>
 

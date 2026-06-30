@@ -222,3 +222,45 @@
     });
   });
 })();
+
+/* Case study lightbox (iframe popup; the link still navigates if JS is off) */
+(function () {
+  var modal = document.getElementById('case-modal');
+  if (!modal) return;
+  var frame = modal.querySelector('.case-modal-frame');
+  var loaded = false;
+  var lastFocus = null;
+
+  function openModal(url) {
+    if (!url) return;
+    lastFocus = document.activeElement;
+    if (!loaded) {
+      frame.src = url + (url.indexOf('?') > -1 ? '&' : '?') + 'embed=1';
+      loaded = true;
+    }
+    modal.hidden = false;
+    document.body.classList.add('case-modal-open');
+    var btn = modal.querySelector('.case-modal-close');
+    if (btn) btn.focus();
+  }
+  function closeModal() {
+    modal.hidden = true;
+    document.body.classList.remove('case-modal-open');
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+
+  document.querySelectorAll('[data-case-modal]').forEach(function (t) {
+    t.addEventListener('click', function (e) {
+      e.preventDefault();
+      openModal(t.getAttribute('data-case-modal') || t.getAttribute('href'));
+    });
+  });
+  modal.addEventListener('click', function (e) {
+    if (e.target === modal || (e.target.closest && e.target.closest('[data-case-close]'))) {
+      closeModal();
+    }
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && !modal.hidden) closeModal();
+  });
+})();
