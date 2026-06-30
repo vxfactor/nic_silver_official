@@ -50,7 +50,7 @@ body {
   font-size: 1rem;
   line-height: 1.6;
   color: var(--text-primary);
-  background-color: var(--bg-cream);
+  background-color: var(--bg-white);
   overflow-x: hidden;
 }
 
@@ -159,7 +159,7 @@ h3 { font-size: 1.125rem; }
   position: fixed;
   top: 0; left: 0; right: 0;
   z-index: 10000;
-  background: rgba(245, 241, 238, 0.95);
+  background: rgba(254, 255, 255, 0.85);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid transparent;
@@ -213,7 +213,7 @@ h3 { font-size: 1.125rem; }
 
 /* --- Sections --- */
 .section { padding: var(--section-padding) 0; }
-.section-cream { background-color: var(--bg-cream); }
+.section-cream { background-color: var(--bg-white); }
 .section-beige { background-color: var(--bg-beige); }
 .section-white { background-color: var(--bg-white); }
 .section-dark { background-color: var(--bg-dark); }
@@ -223,13 +223,32 @@ h3 { font-size: 1.125rem; }
 
 /* --- 01 Hero --- */
 .hero {
+  position: relative;
+  overflow: hidden;
   padding-top: calc(var(--nav-height) + clamp(4rem, 8vw, 8rem));
   padding-bottom: var(--section-padding);
   min-height: 80vh;
   display: flex;
   align-items: center;
-  background-color: var(--bg-cream);
+  background-color: var(--bg-white);
 }
+
+/* Subtle node-network mesh, mirrored to the right and faded toward the headline */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("../assets/hero-mesh.svg");
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: cover;
+  -webkit-mask-image: linear-gradient(to left, #000 0%, #000 22%, transparent 62%);
+  mask-image: linear-gradient(to left, #000 0%, #000 22%, transparent 62%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero .hero-container { position: relative; z-index: 1; }
 
 .hero-content {
   max-width: 720px;
@@ -273,7 +292,7 @@ h3 { font-size: 1.125rem; }
 /* --- 02 Tool integrations row --- */
 .tool-row {
   padding: 3rem 0;
-  background: var(--bg-cream);
+  background: var(--bg-white);
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
 }
