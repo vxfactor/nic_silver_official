@@ -217,6 +217,8 @@ h3 { font-size: 1.125rem; }
 .section-beige { background-color: var(--bg-beige); }
 .section-white { background-color: var(--bg-white); }
 .section-dark { background-color: var(--bg-dark); }
+/* Testimonials get a warm cream band so they read distinct from the white method above and the beige offers below */
+#testimonials { background-color: var(--bg-cream); }
 .section-dark .section-headline,
 .section-dark h2 { color: var(--text-on-dark); }
 .section-dark p { color: var(--text-on-dark-muted); }
@@ -1140,10 +1142,19 @@ body.case-modal-open .sai-widget-panel { display: none; }
 }
 
 /* ===== Video demo (#see-it-running) ===== */
+/* "See it running" — centered focal section */
+#see-it-running .section-eyebrow,
+#see-it-running .section-headline,
+#see-it-running .section-intro {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
 .video-frame {
   position: relative;
   max-width: 960px;
-  margin: 2.5rem 0 0;
+  margin: 2.5rem auto 0;
   aspect-ratio: 16 / 9;
   border-radius: 12px;
   overflow: hidden;

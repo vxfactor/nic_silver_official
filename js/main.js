@@ -149,13 +149,19 @@
       opacity: 0, y: 24, duration: 0.6, stagger: 0.1, ease: ease, clearProps: 'all'
     });
 
-    /* Featured testimonial + Offers */
-    gsap.from('.featured-testimonial', {
-      scrollTrigger: { trigger: '#offers', start: 'top 85%' },
-      opacity: 0, y: 20, duration: 0.6, ease: ease
+    /* Testimonials */
+    gsap.from('#testimonials .section-eyebrow, #testimonials .section-headline', {
+      scrollTrigger: { trigger: '#testimonials', start: 'top 82%' },
+      opacity: 0, y: 16, duration: 0.5, stagger: 0.08, ease: ease
     });
 
-    gsap.from('#offers .section-eyebrow-spaced, #offers .section-headline', {
+    gsap.from('.testimonial-card', {
+      scrollTrigger: { trigger: '.testimonials-pair', start: 'top 85%' },
+      opacity: 0, y: 24, duration: 0.6, stagger: 0.12, ease: ease, clearProps: 'all'
+    });
+
+    /* Offers */
+    gsap.from('#offers .section-eyebrow, #offers .section-headline', {
       scrollTrigger: { trigger: '.offers-grid', start: 'top 90%' },
       opacity: 0, y: 16, duration: 0.5, stagger: 0.08, ease: ease
     });
