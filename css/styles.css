@@ -693,6 +693,13 @@ h3 { font-size: 1.125rem; }
   flex: 1;
 }
 
+.offer-guarantee {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
 .offer-who {
   font-size: 0.875rem;
   color: var(--text-secondary);
