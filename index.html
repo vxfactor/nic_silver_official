@@ -46,8 +46,11 @@
         "@type": "Offer",
         "name": "AI Audit",
         "description": "Your number-one manual bottleneck identified and a working AI agent shipped against your real stack, typically inside 2 weeks. If both are not delivered, full refund.",
-        "price": "2000",
-        "priceCurrency": "USD",
+        "priceSpecification": {
+          "@type": "PriceSpecification",
+          "minPrice": 2000,
+          "priceCurrency": "USD"
+        },
         "url": "https://nicsilver.com/#offers",
         "itemOffered": {
           "@type": "Service",
@@ -343,7 +346,7 @@
         <div class="offers-grid">
           <article class="offer-card">
             <h3 class="offer-name">AI Audit</h3>
-            <p class="offer-price">$2,000<span class="offer-price-note"> · flat</span></p>
+            <p class="offer-price">From $2,000<span class="offer-price-note"> · scoped to project size</span></p>
             <p class="offer-outcome">A clear map of where AI fits in your business, plus one working agent built against the first bottleneck, typically inside 2 weeks.</p>
             <p class="offer-guarantee">You get both, or a full refund.</p>
             <p class="offer-who"><strong>Who it's for:</strong> Founders who want to stop guessing before committing to a full AI operating system.</p>
